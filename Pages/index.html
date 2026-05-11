@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNC Rental Spa</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CONFIGURACIÓN GLOBAL: FONDO BEIGE */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            border: 15px solid #F37021;
+            background-color: #F5F5DC;
+            color: #111111;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fuente-gnc {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        /* COLORES PRINCIPALES */
+        .texto-naranja {
+            color: #F37021;
+        }
+
+        .texto-azul {
+            color: #00AEEF;
+        }
+
+        .texto-manzana {
+            color: #8DB600;
+        }
+
+        .texto-oscuro {
+            color: #111111;
+        }
+
+        .texto-blanco {
+            color: #ffffff;
+        }
+
+        /* NAVBAR BLANCO */
+        .navbar-gnc {
+            background-color: #ffffff;
+            border-bottom: 3px solid #00AEEF;
+            margin: -15px -15px 0 -15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .nav-link.gnc-link {
+            color: #111111 !important;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+            .nav-link.gnc-link:hover {
+                color: #8DB600 !important;
+            }
+
+        /* BOTÓN WHATSAPP VERDE MANZANA */
+        .btn-manzana {
+            background-color: #8DB600;
+            color: #ffffff !important;
+            font-weight: 800;
+            border-radius: 0;
+            text-transform: uppercase;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+            .btn-manzana:hover {
+                background-color: #111111;
+                color: #ffffff !important;
+            }
+
+        /* TARJETAS DE FLOTA */
+        .card-gnc {
+            border-radius: 0;
+            border: 1px solid #dddddd;
+            border-top: 4px solid #00AEEF;
+            background-color: #ffffff;
+            transition: transform 0.3s;
+        }
+
+            .card-gnc:hover {
+                transform: translateY(-10px);
+                border-color: #8DB600;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            }
+
+        .seccion-ancla {
+            scroll-margin-top: 100px;
+        }
+
+        /* ESTILOS FOOTER */
+        .titulo-columna {
+            border-left: 4px solid #00AEEF;
+            padding-left: 12px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .lista-servicios {
+            list-style: none;
+            padding: 0;
+        }
+
+            .lista-servicios li {
+                margin-bottom: 18px;
+            }
+
+        .servicio-link {
+            color: #333333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+            .servicio-link i {
+                color: #8DB600;
+                font-size: 1.2rem;
+                opacity: 0;
+                transform: translateX(-15px);
+                transition: all 0.3s ease;
+                width: 0;
+                overflow: hidden;
+            }
+
+            .servicio-link:hover {
+                color: #F37021;
+                transform: translateX(5px);
+            }
+
+                .servicio-link:hover i {
+                    opacity: 1;
+                    transform: translateX(0);
+                    width: 25px;
+                }
+
+        .caja-icono {
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+            .caja-icono:hover {
+                border-color: #8DB600;
+            }
+
+        .gnc-wa-contact-link {
+            background-color: #ffffff;
+            color: #8DB600 !important;
+            border: 1px solid #8DB600;
+            border-radius: 4px;
+            text-decoration: none;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+            .gnc-wa-contact-link:hover {
+                border-color: #8DB600;
+                background-color: #8DB600;
+                color: #ffffff !important;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-gnc">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="#inicio" style="gap: 12px;">
+                <img src="wwwroot/images/logo.png" alt="Logo GNC" height="50" style="border-radius: 4px; object-fit: contain;">
+                <span class="fuente-gnc fs-3 fw-bold mb-0 lh-1">
+                    <span class="texto-azul">GNC</span> <span class="texto-naranja">RENTAL SPA</span>
+                </span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link gnc-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link gnc-link" href="#flota">Flota</a></li>
+                    <li class="nav-item"><a class="nav-link gnc-link" href="#quienes-somos">Quiénes Somos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="inicio" class="position-relative overflow-hidden p-4 p-md-5 text-center seccion-ancla" style="background: linear-gradient(rgba(13,13,13,0.7), rgba(141, 182, 0, 0.3)), url('https://images.unsplash.com/photo-1541888079815-565452d919bb?auto=format&fit=crop&q=80&w=1920') no-repeat center center; background-size: cover; border-bottom: 5px solid #8DB600; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+        <h1 class="display-1 fw-bold text-white fuente-gnc lh-1 mb-3" style="letter-spacing: 2px;">GNC RENTAL SPA</h1>
+        <h3 class="h2 fw-bold texto-azul fuente-gnc lh-1 mb-1">ELEVAMOS</h3>
+        <h3 class="h2 fw-bold texto-naranja fuente-gnc lh-1 mb-4">TUS PROYECTOS</h3>
+        <p class="lead fw-bold d-inline-block px-3 py-2 border mx-auto fuente-gnc mt-3" style="background-color: #ffffff; color: #111111; border-color: #8DB600 !important;">MAQUINARIA CONFIABLE, SERVICIO RESPONSABLE</p>
+    </div>
+
+    <div id="flota" class="container-fluid py-5 seccion-ancla">
+        <div class="container">
+            <div class="text-center mb-5 py-3" style="border-bottom: 2px solid #dddddd;">
+                <h2 class="display-5 fuente-gnc texto-oscuro mb-0">NUESTRA <span class="texto-azul">FLOTA</span> DISPONIBLE</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Grúa+Horquilla" class="card-img-top rounded-0" alt="Grúa Horquilla" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Grúa Horquilla 2 Ton a 6 Ton.</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Gas o Diesel</h6>
+                            <p class="card-text text-muted small fw-semibold">Mástil triple, motor a gas, ideal para bodega.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Grúa%20Horquilla%202%20Ton%20a%206%20Ton." target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Tijera+Eléctrica" class="card-img-top rounded-0" alt="Tijera articulada" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada de 10</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrica</h6>
+                            <p class="card-text text-muted small fw-semibold">Variedad de tijeras articuladas de 10 metros electricas</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Tijera%20articulada%20de%2010" target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Tijera+Diesel" class="card-img-top rounded-0" alt="Tijera Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada 15 MTS.</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
+                            <p class="card-text text-muted small fw-semibold">Tijera articulada de 15 metros diesel para variedad de terrenos</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Tijera%20articulada%2015%20MTS." target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Brazo+Diesel" class="card-img-top rounded-0" alt="Brazo Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
+                            <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros diesel para variedad de terrenos</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Brazo%20articulado%2016%20MTS%20(Diesel)" target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Brazo+Eléctrico" class="card-img-top rounded-0" alt="Brazo Electrico" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
+                            <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros electrico</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Brazo%20articulado%2016%20MTS%20(Electrico)" target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-gnc h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/eeeeee/00AEEF?text=Manipulador" class="card-img-top rounded-0" alt="Manipulador" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Manipulador telescopico</h5>
+                            <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
+                            <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros electrico</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <a href="https://wa.me/56985555741?text=Hola,%20me%20interesa%20cotizar%20la%20máquina:%20Manipulador%20telescopico" target="_blank" class="btn-manzana w-100 py-3 fs-5">
+                                <i class="bi bi-whatsapp"></i> COTIZAR AHORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="quienes-somos" class="container-fluid py-5 seccion-ancla" style="background-color: #E8E4D5; border-top: 5px solid #00AEEF; margin-bottom: -15px; position: relative; overflow: hidden;">
+
+        <h1 class="fuente-gnc position-absolute w-100 text-center" style="font-size: 15vw; color: rgba(0,0,0,0.03); top: 20%; left: 0; z-index: 0; pointer-events: none;">HEAVY DUTY</h1>
+
+        <div class="container position-relative" style="z-index: 1; padding-top: 40px; padding-bottom: 40px;">
+            <div class="row gx-5">
+
+                <div class="col-lg-4 mb-5">
+                    <h6 class="texto-naranja titulo-columna">CORPORATIVO</h6>
+
+                    <div class="d-flex align-items-center mb-4" style="gap: 15px;">
+                        <img src="wwwroot/images/logo.png" alt="Logo GNC" style="height: 65px; border-radius: 4px; object-fit: contain;">
+                        <div>
+                            <h2 class="display-6 fuente-gnc texto-oscuro mb-0 lh-1">GNC RENTAL</h2>
+                            <h2 class="display-6 fuente-gnc texto-azul mb-0 lh-1">SPA</h2>
+                        </div>
+                    </div>
+
+                    <p class="text-muted mb-4 pe-md-4" style="line-height: 1.8; font-weight: 500;">
+                        Líderes en soluciones de izaje crítico y logística de maquinaria pesada. Operamos bajo los más altos estándares internacionales de seguridad operativa.
+                    </p>
+
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/share/1Gb1TsDZSL/" target="_blank" class="caja-icono text-decoration-none shadow-sm">
+                            <i class="bi bi-facebook texto-azul fs-5"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gncrental?igsh=dTNjN2lrMm9lajdu" target="_blank" class="caja-icono text-decoration-none shadow-sm">
+                            <i class="bi bi-instagram texto-naranja fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
+
+                    <ul class="lista-servicios">
+                        <li><a href="#flota" class="servicio-link"><i class="bi bi-chevron-right"></i> Catálogo de Grúas</a></li>
+                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Montajes Industriales</a></li>
+                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Transporte Especializado</a></li>
+                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Certificaciones</a></li>
+                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Portal Clientes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="texto-naranja titulo-columna">CENTRAL DE OPERACIONES</h6>
+
+                    <div class="d-flex mb-4">
+                        <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                            <i class="bi bi-geo-alt-fill texto-azul fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="texto-naranja fw-bold mb-1" style="font-size: 0.85rem; letter-spacing: 1px;">CASA MATRIZ</h6>
+                            <p class="mb-0 texto-oscuro fw-bold fs-6">Vicuña Mackenna #031, Melipilla, Chile</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                            <i class="bi bi-telephone-fill texto-naranja fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="texto-naranja fw-bold mb-1" style="font-size: 0.85rem; letter-spacing: 1px;">LÍNEA DIRECTA</h6>
+                            <a href="tel:+56985555741" class="texto-oscuro text-decoration-none fs-5 fw-bold d-block mb-2">+56 9 8555 5741</a>
+                            <a href="https://wa.me/56985555741" target="_blank" class="gnc-wa-contact-link text-uppercase">
+                                <i class="bi bi-whatsapp"></i> Chat WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                            <i class="bi bi-envelope-fill texto-manzana fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="texto-naranja fw-bold mb-1" style="font-size: 0.85rem; letter-spacing: 1px;">CONSULTAS TÉCNICAS</h6>
+                            <a href="mailto:german_ncabrera@hotmail.com" class="texto-oscuro fw-bold text-decoration-none">german_ncabrera@hotmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
