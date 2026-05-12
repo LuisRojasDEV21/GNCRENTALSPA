@@ -7,4 +7,8 @@
     <RootNamespace>GNC_RENTAL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="flota\" />
+  </ItemGroup>
+
 </Project>
