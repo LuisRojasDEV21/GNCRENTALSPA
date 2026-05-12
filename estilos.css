@@ -3,13 +3,13 @@
    ========================================= */
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Mantenemos tu código original */
 }
 
 body {
     margin: 0;
     padding: 0;
-    border: 15px solid #F37021;
+    /* BORDES NARANJAS ELIMINADOS */
     background-color: #F5F5DC;
     color: #111111;
     min-height: 100vh;
@@ -44,12 +44,20 @@ body {
 }
 
 /* =========================================
-   BARRA DE NAVEGACIÓN (HEADER)
+   BARRA DE NAVEGACIÓN (HEADER FIJO)
    ========================================= */
+gnc-header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    display: block;
+}
+
 .navbar-gnc {
     background-color: #ffffff;
+    /* BORDER-TOP NARANJA ELIMINADO */
     border-bottom: 3px solid #00AEEF;
-    margin: -15px -15px 0 -15px;
+    margin: 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
@@ -64,6 +72,18 @@ body {
     .nav-link.gnc-link:hover {
         color: #8DB600 !important;
     }
+
+/* =========================================
+   AJUSTES DE ESPACIOS (ELIMINAR HUECOS)
+   ========================================= */
+#inicio {
+    margin-top: 0 !important;
+}
+
+#flota .text-center {
+    padding-top: 10px !important;
+    margin-bottom: 25px !important;
+}
 
 /* =========================================
    BOTONES

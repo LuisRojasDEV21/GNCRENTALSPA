@@ -8,7 +8,7 @@
 class GncHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <nav class="navbar navbar-expand-lg sticky-top navbar-gnc">
+        <nav class="navbar navbar-expand-lg navbar-gnc">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center text-decoration-none" href="/" style="gap: 12px;">
                     <img src="/wwwroot/images/logo.png" alt="Logo GNC" height="50" style="border-radius: 4px; object-fit: contain;">

@@ -9,227 +9,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* CONFIGURACIÓN GLOBAL: FONDO BEIGE */
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            border: 15px solid #F37021;
-            background-color: #F5F5DC;
-            color: #111111;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .fuente-gnc {
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            font-style: italic;
-        }
-
-        /* COLORES PRINCIPALES */
-        .texto-naranja {
-            color: #F37021;
-        }
-
-        .texto-azul {
-            color: #00AEEF;
-        }
-
-        .texto-manzana {
-            color: #8DB600;
-        }
-
-        .texto-oscuro {
-            color: #111111;
-        }
-
-        .texto-blanco {
-            color: #ffffff;
-        }
-
-        /* NAVBAR BLANCO */
-        .navbar-gnc {
-            background-color: #ffffff;
-            border-bottom: 3px solid #00AEEF;
-            margin: -15px -15px 0 -15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .nav-link.gnc-link {
-            color: #111111 !important;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-            .nav-link.gnc-link:hover {
-                color: #8DB600 !important;
-            }
-
-        /* BOTÓN NARANJA GNC (NUEVO) */
-        .btn-naranja-gnc {
-            background-color: #F37021;
-            color: #ffffff !important;
-            font-weight: 800;
-            border-radius: 0;
-            text-transform: uppercase;
-            border: none;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-            .btn-naranja-gnc:hover {
-                background-color: #111111;
-                color: #ffffff !important;
-            }
-
-        /* TARJETAS DE FLOTA */
-        .card-gnc {
-            border-radius: 0;
-            border: 1px solid #dddddd;
-            border-top: 4px solid #00AEEF;
-            background-color: #ffffff;
-            transition: transform 0.3s;
-        }
-
-            .card-gnc:hover {
-                transform: translateY(-10px);
-                border-color: #8DB600;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-            }
-
-        .seccion-ancla {
-            scroll-margin-top: 100px;
-        }
-
-        /* ESTILOS FOOTER */
-        .titulo-columna {
-            border-left: 4px solid #00AEEF;
-            padding-left: 12px;
-            letter-spacing: 2px;
-            font-weight: 800;
-            margin-bottom: 30px;
-        }
-
-        .lista-servicios {
-            list-style: none;
-            padding: 0;
-        }
-
-            .lista-servicios li {
-                margin-bottom: 18px;
-            }
-
-        .servicio-link {
-            color: #333333;
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-            .servicio-link i {
-                color: #8DB600;
-                font-size: 1.2rem;
-                opacity: 0;
-                transform: translateX(-15px);
-                transition: all 0.3s ease;
-                width: 0;
-                overflow: hidden;
-            }
-
-            .servicio-link:hover {
-                color: #F37021;
-                transform: translateX(5px);
-            }
-
-                .servicio-link:hover i {
-                    opacity: 1;
-                    transform: translateX(0);
-                    width: 25px;
-                }
-
-        .caja-icono {
-            width: 45px;
-            height: 45px;
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-
-            .caja-icono:hover {
-                border-color: #8DB600;
-            }
-
-        .gnc-wa-contact-link {
-            background-color: #ffffff;
-            color: #8DB600 !important;
-            border: 1px solid #8DB600;
-            border-radius: 4px;
-            text-decoration: none;
-            padding: 6px 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-            .gnc-wa-contact-link:hover {
-                border-color: #8DB600;
-                background-color: #8DB600;
-                color: #ffffff !important;
-            }
-
-        .gnc-call-contact-link {
-            background-color: #ffffff;
-            color: #F37021 !important;
-            border: 1px solid #F37021;
-            border-radius: 4px;
-            text-decoration: none;
-            padding: 6px 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-            .gnc-call-contact-link:hover {
-                border-color: #F37021;
-                background-color: #F37021;
-                color: #ffffff !important;
-            }
-    </style>
+    <!-- AQUÍ LLAMAMOS A TODOS TUS ESTILOS DESDE EL ARCHIVO CENTRAL -->
+    <link rel="stylesheet" href="/estilos.css">
 </head>
 <body>
 
     <!-- COMPONENTE HEADER CENTRALIZADO -->
     <gnc-header></gnc-header>
 
-    <div id="inicio" class="position-relative overflow-hidden p-4 p-md-5 text-center seccion-ancla" style="background: linear-gradient(rgba(13,13,13,0.7), rgba(141, 182, 0, 0.3)), url('https://images.unsplash.com/photo-1541888079815-565452d919bb?auto=format&fit=crop&q=80&w=1920') no-repeat center center; background-size: cover; border-bottom: 5px solid #8DB600; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+    <!-- SECCIÓN HERO COMPACTA (SIN ESPACIOS GIGANTES) -->
+    <div id="inicio" class="text-center seccion-ancla" style="background: linear-gradient(rgba(13,13,13,0.7), rgba(141, 182, 0, 0.3)), url('https://images.unsplash.com/photo-1541888079815-565452d919bb?auto=format&fit=crop&q=80&w=1920') no-repeat center center; background-size: cover; border-bottom: 5px solid #8DB600; padding: 80px 20px; display: flex; flex-direction: column; justify-content: center;">
         <h1 class="display-1 fw-bold text-white fuente-gnc lh-1 mb-3" style="letter-spacing: 2px;">GNC RENTAL SPA</h1>
         <h3 class="h2 fw-bold texto-azul fuente-gnc lh-1 mb-1">ELEVAMOS</h3>
-        <h3 class="h2 fw-bold texto-naranja fuente-gnc lh-1 mb-4">TUS PROYECTOS</h3>
-        <p class="lead fw-bold d-inline-block px-3 py-2 border mx-auto fuente-gnc mt-3" style="background-color: #ffffff; color: #111111; border-color: #8DB600 !important;">MAQUINARIA CONFIABLE, SERVICIO RESPONSABLE</p>
+        <h3 class="h2 fw-bold texto-naranja fuente-gnc lh-1 mb-0">TUS PROYECTOS</h3>
     </div>
 
-    <div id="flota" class="container-fluid py-5 seccion-ancla">
+    <!-- SECCIÓN DE FLOTA AJUSTADA -->
+    <div id="flota" class="container-fluid py-4 seccion-ancla">
         <div class="container">
-            <div class="text-center mb-5 py-3" style="border-bottom: 2px solid #dddddd;">
+            <div class="text-center mb-4 pb-3" style="border-bottom: 2px solid #dddddd;">
                 <h2 class="display-5 fuente-gnc texto-oscuro mb-0">NUESTRA <span class="texto-azul">FLOTA</span> DISPONIBLE</h2>
             </div>
 
@@ -237,14 +35,14 @@
                 <!-- GRÚA HORQUILLA -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/gruahorquilla.jpg" class="card-img-top rounded-0" alt="Grúa Horquilla" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/gruahorquilla.jpg" class="card-img-top rounded-0" alt="Grúa Horquilla" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Grúa Horquilla 2 Ton a 6 Ton.</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Gas o Diesel</h6>
                             <p class="card-text text-muted small fw-semibold">Mástil triple, motor a gas, ideal para bodega.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/gruahorquilla" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/gruahorquilla" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
@@ -254,14 +52,14 @@
                 <!-- TIJERA 10M -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/tijera10mtselectrica.jpg" class="card-img-top rounded-0" alt="Tijera articulada" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/tijera10mtselectrica.jpg" class="card-img-top rounded-0" alt="Tijera articulada" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada de 10</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrica</h6>
                             <p class="card-text text-muted small fw-semibold">Variedad de tijeras articuladas de 10 metros electricas</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/tijeraelectrica" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/tijeraelectrica" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
@@ -271,14 +69,14 @@
                 <!-- TIJERA 15M -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/tijera15mtsdiesel.jpg" class="card-img-top rounded-0" alt="Tijera Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/tijera15mtsdiesel.jpg" class="card-img-top rounded-0" alt="Tijera Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada 15 MTS.</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
                             <p class="card-text text-muted small fw-semibold">Tijera articulada de 15 metros diesel para variedad de terrenos</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/tijeradiesel" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/tijeradiesel" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
@@ -288,14 +86,14 @@
                 <!-- BRAZO DIESEL -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/Brazodiesel.jpg" class="card-img-top rounded-0" alt="Brazo Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/Brazodiesel.jpg" class="card-img-top rounded-0" alt="Brazo Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
                             <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros diesel para variedad de terrenos</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/brazodiesel" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/brazodiesel" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
@@ -305,14 +103,14 @@
                 <!-- BRAZO ELÉCTRICO -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/Brazoelectrico.jpg" class="card-img-top rounded-0" alt="Brazo Electrico" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/Brazoelectrico.jpg" class="card-img-top rounded-0" alt="Brazo Electrico" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
                             <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros electrico</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/brazoelectrico" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/brazoelectrico" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
@@ -322,14 +120,14 @@
                 <!-- MANIPULADOR -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="wwwroot/images/Manipulador.jpg" class="card-img-top rounded-0" alt="Manipulador" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="/wwwroot/images/Manipulador.jpg" class="card-img-top rounded-0" alt="Manipulador" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Manipulador telescopico</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
                             <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros electrico</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
-                            <a href="flota/manipulador" class="btn-naranja-gnc w-100 py-3 fs-5">
+                            <a href="/flota/manipulador" class="btn-naranja-gnc w-100 py-3 fs-5">
                                 <i class="bi bi-info-circle"></i> MÁS INFORMACIÓN
                             </a>
                         </div>
