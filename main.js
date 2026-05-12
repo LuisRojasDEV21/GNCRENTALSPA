@@ -1,6 +1,10 @@
-﻿// =========================================
-// 1. COMPONENTE DE CABECERA (HEADER)
-// =========================================
+﻿(function () {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/png';
+    favicon.href = '/wwwroot/images/logo.png'; // Ruta de tu logo
+    document.head.appendChild(favicon);
+})();
 class GncHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
