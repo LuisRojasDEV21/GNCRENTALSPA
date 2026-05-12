@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GNC Rental Spa</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- RUTAS LOCALES CON NPM -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
@@ -192,6 +193,26 @@
                 background-color: #8DB600;
                 color: #ffffff !important;
             }
+
+        /* BOTÓN LLAMAR NARANJA */
+        .gnc-call-contact-link {
+            background-color: #ffffff;
+            color: #F37021 !important;
+            border: 1px solid #F37021;
+            border-radius: 4px;
+            text-decoration: none;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+            .gnc-call-contact-link:hover {
+                border-color: #F37021;
+                background-color: #F37021;
+                color: #ffffff !important;
+            }
     </style>
 </head>
 <body>
@@ -319,7 +340,7 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Manipulador telescopico</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
-                            <p class="card-text text-muted small fw-semibold">Brazo articulado de 16 metros electrico</p>
+                            <p class="card-text text-muted small fw-semibold">Brazo articulado de 10 metros diesel</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 p-0">
                             <a href="manipulador.html" class="btn-manzana w-100 py-3 fs-5">
@@ -339,7 +360,7 @@
             <div class="row gx-5">
 
                 <div class="col-lg-4 mb-5">
-                    <h6 class="texto-naranja titulo-columna">CORPORATIVO</h6>
+                    <h6 class="texto-naranja titulo-columna">QUIENES SOMOS</h6>
 
                     <div class="d-flex align-items-center mb-4" style="gap: 15px;">
                         <img src="wwwroot/images/logo.png" alt="Logo GNC" style="height: 65px; border-radius: 4px; object-fit: contain;">
@@ -350,7 +371,7 @@
                     </div>
 
                     <p class="text-muted mb-4 pe-md-4" style="line-height: 1.8; font-weight: 500;">
-Corregir información
+                        INFORMACIÓN
                     </p>
 
                     <div class="d-flex gap-3 mt-4">
@@ -370,7 +391,7 @@ Corregir información
                         <li><a href="#flota" class="servicio-link"><i class="bi bi-chevron-right"></i> Catálogo de Grúas</a></li>
                         <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Montajes Industriales</a></li>
                         <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Transporte Especializado</a></li>
-                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Certificaciones</a></li>
+                        <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Cursos</a></li>
                         <li><a href="#" class="servicio-link"><i class="bi bi-chevron-right"></i> Portal Clientes</a></li>
                     </ul>
                 </div>
@@ -394,10 +415,15 @@ Corregir información
                         </div>
                         <div>
                             <h6 class="texto-naranja fw-bold mb-1" style="font-size: 0.85rem; letter-spacing: 1px;">LÍNEA DIRECTA</h6>
-                            <a href="tel:+56985555741" class="texto-oscuro text-decoration-none fs-5 fw-bold d-block mb-2">+56 9 8555 5741</a>
-                            <a href="https://wa.me/56985555741" target="_blank" class="gnc-wa-contact-link text-uppercase">
-                                <i class="bi bi-whatsapp"></i> Chat WhatsApp
-                            </a>
+                            <p class="mb-2 texto-oscuro fw-bold fs-6">+56 9 8555 5741</p>
+                            <div class="d-flex flex-column gap-2 align-items-start">
+                                <a href="tel:+56985555741" class="gnc-call-contact-link text-uppercase">
+                                    <i class="bi bi-telephone-fill"></i> Llamar Ahora
+                                </a>
+                                <a href="https://wa.me/56985555741" target="_blank" class="gnc-wa-contact-link text-uppercase">
+                                    <i class="bi bi-whatsapp"></i> Chat WhatsApp
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -407,7 +433,7 @@ Corregir información
                         </div>
                         <div>
                             <h6 class="texto-naranja fw-bold mb-1" style="font-size: 0.85rem; letter-spacing: 1px;">CONSULTAS TÉCNICAS</h6>
-                            <a href="mailto:german_ncabrera@hotmail.es" class="texto-oscuro fw-bold text-decoration-none">german_ncabrera@hotmail.com</a>
+                            <a href="mailto:german_ncabrera@hotmail.es" class="texto-oscuro fw-bold text-decoration-none">german_ncabrera@hotmail.es</a>
                         </div>
                     </div>
                 </div>
@@ -416,6 +442,10 @@ Corregir información
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPT LOCAL CON NPM -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- VERCEL ANALYTICS PARA HTML PURO -->
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
