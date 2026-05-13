@@ -187,10 +187,14 @@ class GncFooter extends HTMLElement {
                                     CASA MATRIZ
 
                                 </h6>
-
-                                <p class="mb-0 texto-oscuro fw-bold fs-6">
-                                    Vicuña Mackenna #031, Melipilla, Chile
-                                </p>
+                                <a href="https://maps.app.goo.gl/KUUf5Spqvk9JyQ196" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="mb-0 texto-oscuro fw-bold fs-6 text-decoration-none d-block gnc-transition"
+                                   onmouseover="this.classList.replace('texto-oscuro', 'texto-naranja')"
+                                   onmouseout="this.classList.replace('texto-naranja', 'texto-oscuro')">
+                                    Vicuña Mackenna #031, Melipilla, Chile <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem; color: var(--color-azul);"></i>
+                                </a>
 
                             </div>
 
