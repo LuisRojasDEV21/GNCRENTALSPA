@@ -1,21 +1,13 @@
-﻿/* =========================================
-   CONSTANTES GLOBALES GNC
-   ========================================= */
-const GNC_PHONE = '56985555741';
+﻿const GNC_PHONE = '56985555741';
 const GNC_LOGO  = '/wwwroot/images/logo.png';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
-/* =========================================
-   FAVICON
-   ========================================= */
 const favicon = document.createElement('link');
 favicon.rel   = 'icon';
 favicon.type  = 'image/png';
 favicon.href  = GNC_LOGO;
 document.head.appendChild(favicon);
 
-/* =========================================
-   HELPER: asignar texto de forma segura
-   ========================================= */
 function setText(id, value) {
     const el = document.getElementById(id);
     if (el) el.innerText = value;
@@ -26,9 +18,6 @@ function setHTML(id, value) {
     if (el) el.innerHTML = value;
 }
 
-/* =========================================
-   1. COMPONENTE DE CABECERA (HEADER)
-   ========================================= */
 class GncHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -59,9 +48,6 @@ class GncHeader extends HTMLElement {
     }
 }
 
-/* =========================================
-   2. COMPONENTE DE PIE DE PÁGINA (FOOTER)
-   ========================================= */
 class GncFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -284,35 +270,28 @@ class GncFooter extends HTMLElement {
     }
 }
 
-/* =========================================
-   REGISTRAR COMPONENTES WEB
-   ========================================= */
 customElements.define('gnc-header', GncHeader);
 customElements.define('gnc-footer', GncFooter);
 
-/* =========================================
-   3. LÓGICA DEL CARRUSEL DE FLOTA
-   ========================================= */
+
 document.addEventListener('DOMContentLoaded', function () {
     const carrusel = document.querySelector('.carousel');
-    if (!carrusel) return; // Salir si no hay carrusel en la página
+    if (!carrusel) return; 
 
     carrusel.addEventListener('slid.bs.carousel', function (event) {
         const item = event.relatedTarget;
         if (!item) return;
 
-        // Textos principales
+
         setHTML('info-titulo',    item.getAttribute('data-titulo')    || '');
         setText('info-subtitulo', item.getAttribute('data-subtitulo') || '');
         setText('info-desc',      item.getAttribute('data-desc')      || '');
-
-        // Especificaciones técnicas
         setText('info-marca',    item.getAttribute('data-marca')    || 'Consulte');
         setText('info-motor',    item.getAttribute('data-motor')    || 'Consulte');
         setText('info-capacidad',item.getAttribute('data-capacidad')|| 'Consulte');
         setText('info-mastil',   item.getAttribute('data-mastil')   || 'N/A');
 
-        // Enlace de WhatsApp dinámico
+
         const btnWa = document.getElementById('btn-wa');
         if (btnWa) {
             const maquina  = item.getAttribute('data-wa') || 'Maquinaria';

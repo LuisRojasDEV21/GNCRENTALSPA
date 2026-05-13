@@ -20,6 +20,7 @@
   "homepage": "https://github.com/LuisRojasDEV21/GNC-RENTALWEB#readme",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1"
   }
