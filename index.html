@@ -11,6 +11,26 @@
 
     <!-- AQUÍ LLAMAMOS A TODOS TUS ESTILOS DESDE EL ARCHIVO CENTRAL -->
     <link rel="stylesheet" href="/estilos.css">
+    <!-- Iconos para la pestaña del navegador y resultados de Google -->
+    <link rel="icon" href="/wwwroot/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/wwwroot/images/logo.png">
+    <!-- Marcado de datos para que Google reconozca a la empresa y su logo -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "GNC Rental SPA",
+          "url": "https://tu-dominio-en-vercel.vercel.app",
+          "logo": "https://tu-dominio-en-vercel.vercel.app/wwwroot/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56-9-8555-5741",
+            "contactType": "customer service",
+            "areaServed": "CL",
+            "availableLanguage": "es"
+          }
+        }
+    </script>
 </head>
 <body>
 
