@@ -69,11 +69,11 @@ class GncFooter extends HTMLElement {
             class="container-fluid seccion-ancla"
             style="background-color: #E8E4D5; border-top: 4px solid #00AEEF; position: relative; overflow: hidden;">
 
-            <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+            <div class="container" style="padding-top: 50px; padding-bottom: 50px; padding-left: 40px; padding-right: 40px;">
                 <div class="row g-4">
 
                     <!-- QUIÉNES SOMOS -->
-                    <div class="col-12 col-lg-4" style="border-right: 1px solid rgba(0,0,0,0.08);">
+                    <div class="col-12 col-lg-4">
 
                         <h6 class="texto-naranja titulo-columna">QUIÉNES SOMOS</h6>
 
@@ -105,32 +105,33 @@ class GncFooter extends HTMLElement {
                     </div>
 
                     <!-- SERVICIOS -->
-                    <div class="col-12 col-md-6 col-lg-2" style="border-right: 1px solid rgba(0,0,0,0.08); padding-left: 2rem;">
+                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
 
-                        <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
-
-                        <ul class="lista-servicios">
-                            <li>
-                                <a href="/#flota" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>Catálogo de Máquinas
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/informacion/cursos" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>Cursos
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/informacion/clientes" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>Portal Clientes
-                                </a>
-                            </li>
-                        </ul>
+                        <div style="width: 100%; max-width: 220px;">
+                            <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
+                            <ul class="lista-servicios">
+                                <li>
+                                    <a href="/#flota" class="servicio-link">
+                                        <i class="bi bi-chevron-right"></i>Catálogo de Máquinas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/informacion/cursos" class="servicio-link">
+                                        <i class="bi bi-chevron-right"></i>Cursos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/informacion/clientes" class="servicio-link">
+                                        <i class="bi bi-chevron-right"></i>Portal Clientes
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
                     </div>
 
                     <!-- CONTACTO -->
-                    <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
+                    <div class="col-12 col-lg-4">
 
                         <h6 class="texto-naranja titulo-columna">CENTRAL DE OPERACIONES</h6>
 
