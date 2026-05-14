@@ -39,7 +39,7 @@ class GncHeader extends HTMLElement {
                          style="border-radius: 4px; object-fit: contain;"
                          onerror="this.style.display='none'">
                     <span class="fuente-gnc fs-3 fw-bold mb-0 lh-1">
-                        <span class="texto-azul">GNC</span> <span class="texto-naranja">RENTAL SPA</span>
+                        <span class="texto-naranja">GNC RENTAL SPA</span>
                     </span>
                 </a>
                 <button class="navbar-toggler border-0" type="button"
@@ -82,8 +82,8 @@ class GncFooter extends HTMLElement {
                                  style="height: 60px; border-radius: 4px; object-fit: contain;"
                                  onerror="this.style.display='none'">
                             <div>
-                                <h2 class="fuente-gnc texto-oscuro mb-0 lh-1" style="font-size:1.6rem;">GNC RENTAL</h2>
-                                <h2 class="fuente-gnc texto-azul mb-0 lh-1" style="font-size:1.6rem;">SPA</h2>
+                                <h2 class="fuente-gnc texto-naranja mb-0 lh-1" style="font-size:1.6rem;">GNC RENTAL</h2>
+                            <h2 class="fuente-gnc texto-naranja mb-0 lh-1" style="font-size:1.6rem;">SPA</h2>
                             </div>
                         </div>
 
