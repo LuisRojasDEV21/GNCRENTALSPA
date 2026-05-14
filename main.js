@@ -66,239 +66,148 @@ class GncFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div id="quienes-somos"
-             class="container-fluid pt-2 pb-5 seccion-ancla"
-             style="background-color: #E8E4D5; border-top: 4px solid #00AEEF; margin-bottom: -15px; position: relative; overflow: hidden;">
+            class="container-fluid seccion-ancla"
+            style="background-color: #E8E4D5; border-top: 4px solid #00AEEF; position: relative; overflow: hidden;">
 
-            <div class="container position-relative"
-                 style="z-index: 1; padding-top: 40px; padding-bottom: 40px;">
-
+            <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
                 <div class="row g-4">
 
                     <!-- QUIÉNES SOMOS -->
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4" style="border-right: 1px solid rgba(0,0,0,0.08);">
 
-                        <h6 class="texto-naranja titulo-columna">
-                            QUIÉNES SOMOS
-                        </h6>
+                        <h6 class="texto-naranja titulo-columna">QUIÉNES SOMOS</h6>
 
-                        <div class="d-flex align-items-center mb-3" style="gap: 15px;">
-
-                            <img src="${GNC_LOGO}"
-                                 alt="Logo GNC"
-                                 style="height: 65px; border-radius: 4px; object-fit: contain;"
+                        <div class="d-flex align-items-center mb-3" style="gap: 14px;">
+                            <img src="${GNC_LOGO}" alt="Logo GNC"
+                                 style="height: 60px; border-radius: 4px; object-fit: contain;"
                                  onerror="this.style.display='none'">
-
                             <div>
-                                <h2 class="display-6 fuente-gnc texto-oscuro mb-0 lh-1">
-                                    GNC RENTAL
-                                </h2>
-
-                                <h2 class="display-6 fuente-gnc texto-azul mb-0 lh-1">
-                                    SPA
-                                </h2>
+                                <h2 class="fuente-gnc texto-oscuro mb-0 lh-1" style="font-size:1.6rem;">GNC RENTAL</h2>
+                                <h2 class="fuente-gnc texto-azul mb-0 lh-1" style="font-size:1.6rem;">SPA</h2>
                             </div>
-
                         </div>
 
-                        <p class="texto-oscuro pe-lg-3"
-                           style="font-size: 0.95rem; line-height: 1.6; text-align: justify; opacity: 0.9;">
-
-                            Fundada como Germán Núñez, GNC RENTAL SPA es una empresa familiar que respalda sus servicios con dos décadas de experiencia en Melipilla y la región. Lo que comenzó como transporte de maquinaria, hoy es una flota integral de arriendo de grúas horquilla, plataformas de izaje y servicio técnico. Nuestro sello se mantiene intacto: responsabilidad, puntualidad y el mejor equipo técnico en cada operación.
-
+                        <p class="texto-oscuro pe-lg-3" style="font-size: 0.92rem; line-height: 1.7; text-align: justify; opacity: 0.85;">
+                            Empresa familiar con dos décadas de experiencia en Melipilla y la región. Flota integral de arriendo de grúas horquilla, plataformas de izaje y servicio técnico. Responsabilidad, puntualidad y el mejor equipo técnico en cada operación.
                         </p>
 
-                        <div class="d-flex gap-3 mt-4">
-
-                            <a href="https://www.facebook.com/share/1Gb1TsDZSL/"
-                               target="_blank"
-                               rel="noopener"
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="https://www.facebook.com/share/1Gb1TsDZSL/" target="_blank" rel="noopener"
                                class="caja-icono text-decoration-none shadow-sm">
-
                                 <i class="bi bi-facebook texto-azul fs-5"></i>
-
                             </a>
-
-                            <a href="https://www.instagram.com/gncrental?igsh=dTNjN2lrMm9lajdu"
-                               target="_blank"
-                               rel="noopener"
+                            <a href="https://www.instagram.com/gncrental?igsh=dTNjN2lrMm9lajdu" target="_blank" rel="noopener"
                                class="caja-icono text-decoration-none shadow-sm">
-
                                 <i class="bi bi-instagram texto-naranja fs-5"></i>
-
                             </a>
-
                         </div>
 
                     </div>
 
                     <!-- SERVICIOS -->
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-2" style="border-right: 1px solid rgba(0,0,0,0.08); padding-left: 2rem;">
 
-                        <h6 class="texto-naranja titulo-columna">
-                            SERVICIOS
-                        </h6>
+                        <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
 
                         <ul class="lista-servicios">
-
                             <li>
                                 <a href="/#flota" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>
-                                    Catálogo de Máquinas
+                                    <i class="bi bi-chevron-right"></i>Catálogo de Máquinas
                                 </a>
                             </li>
-
                             <li>
                                 <a href="/informacion/cursos" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>
-                                    Cursos
+                                    <i class="bi bi-chevron-right"></i>Cursos
                                 </a>
                             </li>
-
                             <li>
                                 <a href="/informacion/clientes" class="servicio-link">
-                                    <i class="bi bi-chevron-right"></i>
-                                    Portal Clientes
+                                    <i class="bi bi-chevron-right"></i>Portal Clientes
                                 </a>
                             </li>
-
                         </ul>
 
                     </div>
 
                     <!-- CONTACTO -->
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
 
-                        <h6 class="texto-naranja titulo-columna">
-                            CENTRAL DE OPERACIONES
-                        </h6>
+                        <h6 class="texto-naranja titulo-columna">CENTRAL DE OPERACIONES</h6>
 
                         <!-- DIRECCIÓN -->
-                        <div class="d-flex mb-4">
-
-                            <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                        <div class="d-flex mb-3" style="gap:14px; align-items:flex-start;">
+                            <div class="caja-icono flex-shrink-0 shadow-sm">
                                 <i class="bi bi-geo-alt-fill texto-azul fs-5"></i>
                             </div>
-
                             <div>
-
-                                <h6 class="texto-naranja fw-bold mb-1"
-                                    style="font-size: 0.85rem; letter-spacing: 1px;">
-
-                                    CASA MATRIZ
-
-                                </h6>
-                                <a href="https://maps.app.goo.gl/KUUf5Spqvk9JyQ196" 
-                                   target="_blank" 
-                                   rel="noopener" 
-                                   class="mb-0 texto-oscuro fw-bold fs-6 text-decoration-none d-block gnc-transition"
-                                   onmouseover="this.classList.replace('texto-oscuro', 'texto-naranja')"
-                                   onmouseout="this.classList.replace('texto-naranja', 'texto-oscuro')">
-                                    Vicuña Mackenna #031, Melipilla, Chile <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem; color: var(--color-azul);"></i>
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">CASA MATRIZ</p>
+                                <a href="https://maps.app.goo.gl/KUUf5Spqvk9JyQ196" target="_blank" rel="noopener"
+                                   class="texto-oscuro fw-bold text-decoration-none gnc-transition" style="font-size:0.92rem;"
+                                   onmouseover="this.classList.replace('texto-oscuro','texto-naranja')"
+                                   onmouseout="this.classList.replace('texto-naranja','texto-oscuro')">
+                                    Vicuña Mackenna #031, Melipilla, Chile
+                                    <i class="bi bi-box-arrow-up-right ms-1" style="font-size:0.75rem; color:var(--color-azul);"></i>
                                 </a>
-
                             </div>
-
                         </div>
 
                         <!-- TELÉFONO -->
-                        <div class="d-flex mb-4">
-
-                            <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                        <div class="d-flex mb-3" style="gap:14px; align-items:flex-start;">
+                            <div class="caja-icono flex-shrink-0 shadow-sm">
                                 <i class="bi bi-telephone-fill texto-naranja fs-5"></i>
                             </div>
-
                             <div>
-
-                                <h6 class="texto-naranja fw-bold mb-1"
-                                    style="font-size: 0.85rem; letter-spacing: 1px;">
-
-                                    LÍNEA DIRECTA
-
-                                </h6>
-
-                                <p class="mb-2 texto-oscuro fw-bold fs-6">
-                                    +56 9 8555 5741
-                                </p>
-
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">LÍNEA DIRECTA</p>
+                                <p class="texto-oscuro fw-bold mb-2" style="font-size:1rem;">+56 9 8555 5741</p>
                                 <div class="d-flex flex-wrap gap-2">
-
-                                    <a href="tel:+${GNC_PHONE}"
-                                       class="gnc-call-contact-link text-uppercase">
-
-                                        <i class="bi bi-telephone-fill"></i>
-                                        Llamar Ahora
-
+                                    <a href="tel:+${GNC_PHONE}" class="gnc-call-contact-link text-uppercase">
+                                        <i class="bi bi-telephone-fill"></i> Llamar Ahora
                                     </a>
-
-                                    <a href="https://wa.me/${GNC_PHONE}"
-                                       target="_blank"
-                                       rel="noopener"
+                                    <a href="https://wa.me/${GNC_PHONE}" target="_blank" rel="noopener"
                                        class="gnc-wa-contact-link text-uppercase">
-
-                                        <i class="bi bi-whatsapp"></i>
-                                        Chat WhatsApp
-
+                                        <i class="bi bi-whatsapp"></i> Chat WhatsApp
                                     </a>
-
                                 </div>
-
                             </div>
-
                         </div>
 
                         <!-- EMAIL -->
-                        <div class="d-flex">
-
-                            <div class="caja-icono me-3 flex-shrink-0 shadow-sm">
+                        <div class="d-flex" style="gap:14px; align-items:flex-start;">
+                            <div class="caja-icono flex-shrink-0 shadow-sm">
                                 <i class="bi bi-envelope-fill texto-manzana fs-5"></i>
                             </div>
-
                             <div>
-
-                                <h6 class="texto-naranja fw-bold mb-1"
-                                    style="font-size: 0.85rem; letter-spacing: 1px;">
-
-                                    CONSULTAS TÉCNICAS
-
-                                </h6>
-
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">CONSULTAS TÉCNICAS</p>
                                 <a href="mailto:german_ncabrera@hotmail.es"
-                                   class="texto-oscuro fw-bold text-decoration-none">
-
+                                   class="texto-oscuro fw-bold text-decoration-none" style="font-size:0.92rem;">
                                     german_ncabrera@hotmail.es
-
                                 </a>
-
                             </div>
-
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
-
         </div>
         `;
     }
 }
 
-/* =========================================
-   REGISTRAR COMPONENTES WEB
-   ========================================= */
-customElements.define('gnc-header', GncHeader);
-customElements.define('gnc-footer', GncFooter);
-/* =========================================
-   COMPONENTE DE PIE DE PÁGINA SIMPLE (MINI FOOTER)
-   ========================================= */
 class GncFooterSimple extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="container-fluid py-3 mt-5" style="background-color: #E8E4D5; border-top: 4px solid #00AEEF;">
+        <div class="container-fluid py-3" style="background-color: #E8E4D5; border-top: 2px solid #00AEEF;">
             <div class="container text-center">
-                <p class="mb-0 texto-oscuro fw-bold" style="font-size: 0.9rem;">
-                    © ${new Date().getFullYear()} GNC RENTAL SPA. Todos los derechos reservados.
+                <p class="mb-1 texto-oscuro fw-bold" style="font-size: 0.88rem; opacity: 0.8;">
+                    &copy; 2026. GNC RENTAL SPA — Todos los derechos reservados.
+                </p>
+                <p class="mb-0 texto-oscuro" style="font-size: 0.82rem; opacity: 0.6;">
+                    <a href="#" class="texto-azul fw-bold text-decoration-none">Política de datos de clientes</a>
+                    <span class="mx-2 d-none d-sm-inline">|</span>
+                    <br class="d-sm-none">
+                    Desarrollado por:
+                    <a href="mailto:lu.rojaespi@gmail.com" class="texto-naranja fw-bold text-decoration-none">lu.rojaespi@gmail.com</a>
                 </p>
             </div>
         </div>
@@ -306,13 +215,13 @@ class GncFooterSimple extends HTMLElement {
     }
 }
 
-/* =========================================
-   REGISTRAR COMPONENTES WEB
-   ========================================= */
 customElements.define('gnc-header', GncHeader);
 customElements.define('gnc-footer', GncFooter);
-customElements.define('gnc-footer-simple', GncFooterSimple); // <-- AQUÍ REGISTRAMOS EL NUEVO
+customElements.define('gnc-footer-simple', GncFooterSimple);
 
+/* ... y de aquí para abajo sigue tu código del carrusel ... */
+
+/* IMPORTANTE: Si tenías código del carrusel aquí abajo, déjalo tal cual. Solo reemplaza hasta la línea de arriba. */
 /* =========================================
    3. LÓGICA DEL CARRUSEL DE FLOTA
    ========================================= */
