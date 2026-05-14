@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="flota\" />
+    <Content Include="flota\brazodiesel\Brazodiesel.jpg" />
+    <Content Include="flota\brazoelectrico\Brazoelectrico.jpg" />
+    <Content Include="flota\gruahorquilla\gruahorquilla.jpg" />
+    <Content Include="flota\manipulador\Manipulador.jpg" />
+    <Content Include="flota\tijeradiesel\tijera15mtsdiesel.jpg" />
+    <Content Include="flota\tijeraelectrica\tijera10mtselectrica.jpg" />
   </ItemGroup>
 
 </Project>

@@ -289,6 +289,29 @@ class GncFooter extends HTMLElement {
    ========================================= */
 customElements.define('gnc-header', GncHeader);
 customElements.define('gnc-footer', GncFooter);
+/* =========================================
+   COMPONENTE DE PIE DE PÁGINA SIMPLE (MINI FOOTER)
+   ========================================= */
+class GncFooterSimple extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="container-fluid py-3 mt-5" style="background-color: #E8E4D5; border-top: 4px solid #00AEEF;">
+            <div class="container text-center">
+                <p class="mb-0 texto-oscuro fw-bold" style="font-size: 0.9rem;">
+                    © ${new Date().getFullYear()} GNC RENTAL SPA. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+        `;
+    }
+}
+
+/* =========================================
+   REGISTRAR COMPONENTES WEB
+   ========================================= */
+customElements.define('gnc-header', GncHeader);
+customElements.define('gnc-footer', GncFooter);
+customElements.define('gnc-footer-simple', GncFooterSimple); // <-- AQUÍ REGISTRAMOS EL NUEVO
 
 /* =========================================
    3. LÓGICA DEL CARRUSEL DE FLOTA

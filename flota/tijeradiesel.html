@@ -18,18 +18,49 @@
     <gnc-header></gnc-header>
 
     <!-- SECCIÓN DE DETALLE DE LA MÁQUINA -->
-    <div class="container py-5 mt-4 mb-5">
+    <div class="container pt-3 pb-5">
 
-        <!-- Botón para volver atrás (Ruta absoluta) -->
-        <a href="/#flota" class="text-decoration-none texto-oscuro fw-bold mb-4 d-inline-block">
+        <!-- Botón para volver atrás -->
+        <a href="/#flota" class="text-decoration-none texto-oscuro fw-bold mb-4 d-inline-block gnc-transition" onmouseover="this.classList.replace('texto-oscuro', 'texto-naranja')" onmouseout="this.classList.replace('texto-naranja', 'texto-oscuro')">
             <i class="bi bi-arrow-left"></i> Volver a la flota
         </a>
 
         <div class="row gx-5">
-            <!-- COLUMNA IZQUIERDA: IMAGEN GRANDE -->
+            <!-- COLUMNA IZQUIERDA: CARRUSEL DE 2 IMÁGENES -->
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="detalle-imagen shadow-sm h-100 d-flex align-items-center justify-content-center">
-                    <img src="/wwwroot/images/tijera15mtsdiesel.jpg" alt="Tijera Diesel 15 Metros" class="img-fluid" style="max-height: 400px; object-fit: contain;">
+                <div id="carruselTijeraDiesel" class="carousel slide shadow-sm h-100 rounded" data-bs-ride="carousel" style="background-color: #ffffff; border: 1px solid #e0e0e0;">
+
+                    <!-- Indicadores (Las 2 rayitas de abajo) -->
+                    <div class="carousel-indicators" style="margin-bottom: 0;">
+                        <button type="button" data-bs-target="#carruselTijeraDiesel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #F37021;"></button>
+                        <button type="button" data-bs-target="#carruselTijeraDiesel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #F37021;"></button>
+                    </div>
+
+                    <!-- Imágenes del Carrusel -->
+                    <div class="carousel-inner h-100">
+                        <!-- Primera imagen -->
+                        <div class="carousel-item active h-100">
+                            <div class="d-flex align-items-center justify-content-center h-100 p-4">
+                                <img src="tijeradiesel/tijera15mtsdiesel.jpg" alt="Tijera Diesel 15 Metros - Vista 1" class="d-block img-fluid" style="max-height: 400px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <!-- Segunda imagen -->
+                        <div class="carousel-item h-100">
+                            <div class="d-flex align-items-center justify-content-center h-100 p-4">
+                                <img src="tijeradiesel/tijeraarticulada15mts.jpeg" alt="Tijera Diesel 15 Metros - Vista 2" class="d-block img-fluid" style="max-height: 400px; object-fit: contain;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles de flechas -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselTijeraDiesel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselTijeraDiesel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
                 </div>
             </div>
 
@@ -44,7 +75,7 @@
 
                 <h5 class="fw-bold mt-5 mb-3 border-bottom pb-2">Especificaciones Técnicas</h5>
                 <ul class="lista-caracteristicas list-unstyled mb-5">
-                    <li><strong>Marca:</strong>Haulotte</li>
+                    <li><strong>Marca:</strong> Haulotte</li>
                     <li><strong>Tipo de Motor:</strong> Diesel</li>
                     <li><strong>Altura de Trabajo:</strong> 15 Metros</li>
                     <li><strong>Capacidad de Carga:</strong> Elevada 500 KG</li>
@@ -52,7 +83,7 @@
                     <li><strong>Aplicación:</strong> Construcción exterior, fachadas, montajes industriales y estructuras.</li>
                 </ul>
 
-                <a href="https://wa.me/56985555741?text=Hola,%20vengo%20de%20su%20página%20web.%20Me%20interesa%20cotizar%20la%20Tijera%20articulada%2015%20MTS%20(Diesel)." target="_blank" class="btn-manzana w-100 py-3 fs-4 shadow">
+                <a href="https://wa.me/56985555741?text=Hola,%20vengo%20de%20su%20página%20web.%20Me%20interesa%20cotizar%20la%20Tijera%20articulada%2015%20MTS%20(Diesel)." target="_blank" class="btn-manzana w-100 py-3 fs-4 shadow text-center d-block text-decoration-none text-white fw-bold" style="background-color: #8DB600; border-radius: 5px;">
                     <i class="bi bi-whatsapp"></i> COTIZAR ESTA MÁQUINA
                 </a>
             </div>
@@ -60,7 +91,7 @@
     </div>
 
     <!-- COMPONENTE FOOTER CENTRALIZADO -->
-    <gnc-footer></gnc-footer>
+    <gnc-footer-simple></gnc-footer-simple>
 
     <!-- SCRIPTS -->
     <script src="/main.js"></script>

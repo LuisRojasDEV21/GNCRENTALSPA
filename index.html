@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- AQUÍ LLAMAMOS A TODOS TUS ESTILOS DESDE EL ARCHIVO CENTRAL -->
     <link rel="stylesheet" href="/estilos.css">
-    <!-- Iconos para la pestaña del navegador y resultados de Google -->
     <link rel="icon" href="/wwwroot/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/wwwroot/images/logo.png">
-    <!-- Marcado de datos para que Google reconozca a la empresa y su logo -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -34,7 +31,6 @@
 </head>
 <body>
 
-    <!-- COMPONENTE HEADER CENTRALIZADO -->
     <gnc-header></gnc-header>
 
     <!-- SECCIÓN HERO COMPACTA (SIN ESPACIOS GIGANTES) -->
@@ -44,7 +40,7 @@
         <h3 class="h2 fw-bold texto-naranja fuente-gnc lh-1 mb-0">TUS PROYECTOS</h3>
     </div>
 
-    <!-- SECCIÓN DE FLOTA AJUSTADA -->
+    <!-- SECCIÓN DE FLOTA -->
     <div id="flota" class="container-fluid py-4 seccion-ancla">
         <div class="container">
             <div class="text-center mb-4 pb-3" style="border-bottom: 2px solid #dddddd;">
@@ -55,7 +51,7 @@
                 <!-- GRÚA HORQUILLA -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/gruahorquilla.jpg" class="card-img-top rounded-0" alt="Grúa Horquilla" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/gruahorquilla/gruahorquilla.jpg" class="card-img-top rounded-0" alt="Grúa Horquilla" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Grúa Horquilla 2 Ton a 6 Ton.</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Gas o Diesel</h6>
@@ -72,7 +68,7 @@
                 <!-- TIJERA 10M -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/tijera10mtselectrica.jpg" class="card-img-top rounded-0" alt="Tijera articulada" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/tijeraelectrica/tijera10mtselectrica.jpg" class="card-img-top rounded-0" alt="Tijera articulada" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada de 10</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrica</h6>
@@ -89,7 +85,7 @@
                 <!-- TIJERA 15M -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/tijera15mtsdiesel.jpg" class="card-img-top rounded-0" alt="Tijera Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/tijeradiesel/tijera15mtsdiesel.jpg" class="card-img-top rounded-0" alt="Tijera Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Tijera articulada 15 MTS.</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
@@ -106,7 +102,7 @@
                 <!-- BRAZO DIESEL -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/Brazodiesel.jpg" class="card-img-top rounded-0" alt="Brazo Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/brazodiesel/Brazodiesel.jpg" class="card-img-top rounded-0" alt="Brazo Diesel" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Diesel</h6>
@@ -123,7 +119,7 @@
                 <!-- BRAZO ELÉCTRICO -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/Brazoelectrico.jpg" class="card-img-top rounded-0" alt="Brazo Electrico" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/brazoelectrico/Brazoelectrico.jpg" class="card-img-top rounded-0" alt="Brazo Electrico" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Brazo articulado 16 MTS</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
@@ -140,7 +136,7 @@
                 <!-- MANIPULADOR -->
                 <div class="col">
                     <div class="card card-gnc h-100 shadow-sm">
-                        <img src="/wwwroot/images/Manipulador.jpg" class="card-img-top rounded-0" alt="Manipulador" style="object-fit: cover; height: 200px; padding: 10px;">
+                        <img src="flota/manipulador/Manipulador.jpg" class="card-img-top rounded-0" alt="Manipulador" style="object-fit: cover; height: 200px; padding: 10px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold fuente-gnc texto-oscuro mb-1 fs-4">Manipulador telescopico</h5>
                             <h6 class="card-subtitle mb-3 texto-azul fw-bold">Tipo: Electrico</h6>
@@ -157,10 +153,8 @@
         </div>
     </div>
 
-    <!-- COMPONENTE FOOTER CENTRALIZADO -->
     <gnc-footer></gnc-footer>
 
-    <!-- SCRIPT DEL LAYOUT CENTRALIZADO -->
     <script src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
