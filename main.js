@@ -66,7 +66,9 @@ class GncFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <style>
-            /* ── FOOTER RESPONSIVE ── */
+            /* ══════════════════════════════════════
+               FOOTER BASE (desktop — sin cambios)
+            ══════════════════════════════════════ */
             .gnc-footer-wrap {
                 background-color: #E8E4D5;
                 border-top: 4px solid #00AEEF;
@@ -86,7 +88,6 @@ class GncFooter extends HTMLElement {
                 gap: 40px;
             }
 
-            /* ── COLUMNA: QUIÉNES SOMOS ── */
             .gnc-footer-brand {
                 display: flex;
                 align-items: center;
@@ -114,12 +115,8 @@ class GncFooter extends HTMLElement {
                 margin-bottom: 14px;
             }
 
-            .gnc-footer-social {
-                display: flex;
-                gap: 8px;
-            }
+            .gnc-footer-social { display: flex; gap: 8px; }
 
-            /* ── COLUMNA: SERVICIOS ── */
             .gnc-footer-col-center {
                 display: flex;
                 flex-direction: column;
@@ -131,7 +128,6 @@ class GncFooter extends HTMLElement {
                 max-width: 200px;
             }
 
-            /* ── COLUMNA: OPERACIONES ── */
             .gnc-contact-row {
                 display: flex;
                 gap: 12px;
@@ -139,11 +135,8 @@ class GncFooter extends HTMLElement {
                 margin-bottom: 16px;
             }
 
-            .gnc-contact-row .caja-icono {
-                flex-shrink: 0;
-            }
+            .gnc-contact-row .caja-icono { flex-shrink: 0; }
 
-            /* Email: evitar overflow */
             .gnc-email-link {
                 font-size: 0.88rem;
                 font-weight: bold;
@@ -152,7 +145,6 @@ class GncFooter extends HTMLElement {
                 overflow-wrap: anywhere;
             }
 
-            /* Botones llamar / whatsapp */
             .gnc-btn-group {
                 display: flex;
                 flex-wrap: wrap;
@@ -160,88 +152,180 @@ class GncFooter extends HTMLElement {
                 margin-top: 6px;
             }
 
-            /* ── TABLET: 2 columnas ── */
-            @media (max-width: 991px) {
+            /* ocultar el layout móvil en desktop */
+            .gnc-footer-mobile { display: none; }
+
+            /* ══════════════════════════════════════
+               MÓVIL  ≤ 575px  — DISEÑO NUEVO
+            ══════════════════════════════════════ */
+            @media (max-width: 575px) {
+
+                /* Ocultar layout desktop */
+                .gnc-footer-desktop { display: none !important; }
+
+                /* Mostrar layout móvil */
+                .gnc-footer-mobile {
+                    display: block;
+                    padding: 28px 18px 24px;
+                }
+
+                /* -- Logo + nombre -- */
+                .gnc-m-brand {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 18px;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid rgba(0,0,0,0.12);
+                }
+
+                .gnc-m-brand img {
+                    height: 42px;
+                    border-radius: 4px;
+                    object-fit: contain;
+                }
+
+                .gnc-m-brand-name {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+                }
+
+                /* -- Botones de contacto rápido -- */
+                .gnc-m-cta {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .gnc-m-cta a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    padding: 11px 8px;
+                    border-radius: 8px;
+                    font-size: 0.82rem;
+                    font-weight: 700;
+                    letter-spacing: 0.5px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                .gnc-m-cta-call {
+                    background: transparent;
+                    border: 2px solid var(--color-naranja, #E8732A);
+                    color: var(--color-naranja, #E8732A) !important;
+                }
+
+                .gnc-m-cta-wa {
+                    background: transparent;
+                    border: 2px solid #25D366;
+                    color: #25D366 !important;
+                }
+
+                /* -- Info rápida (dirección + email) -- */
+                .gnc-m-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                    padding-bottom: 18px;
+                    border-bottom: 1px solid rgba(0,0,0,0.12);
+                }
+
+                .gnc-m-info-row {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    font-size: 0.85rem;
+                }
+
+                .gnc-m-info-row i {
+                    font-size: 1rem;
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                }
+
+                .gnc-m-info-row a {
+                    color: inherit;
+                    text-decoration: none;
+                    word-break: break-all;
+                    font-weight: 600;
+                }
+
+                /* -- Links de servicios en fila -- */
+                .gnc-m-services {
+                    margin-bottom: 20px;
+                    padding-bottom: 18px;
+                    border-bottom: 1px solid rgba(0,0,0,0.12);
+                }
+
+                .gnc-m-services-title {
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 10px;
+                }
+
+                .gnc-m-services-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+
+                .gnc-m-services-links a {
+                    font-size: 0.82rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 5px 12px;
+                    border-radius: 20px;
+                    border: 1.5px solid rgba(0,0,0,0.15);
+                    color: inherit;
+                    transition: all 0.2s;
+                }
+
+                .gnc-m-services-links a:hover {
+                    border-color: var(--color-naranja, #E8732A);
+                    color: var(--color-naranja, #E8732A);
+                }
+
+                /* -- Redes sociales -- */
+                .gnc-m-social {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+
+            /* Tablet: 2 columnas (entre 576 y 991px) */
+            @media (min-width: 576px) and (max-width: 991px) {
                 .gnc-footer-grid {
                     grid-template-columns: 1fr 1fr;
                     gap: 32px;
                 }
-
-                /* Operaciones ocupa las 2 columnas */
-                .gnc-footer-col-ops {
-                    grid-column: 1 / -1;
-                }
-
-                .gnc-footer-col-center {
-                    align-items: flex-start;
-                }
-
-                .gnc-footer-col-center > div {
-                    max-width: 100%;
-                }
-            }
-
-            /* ── MÓVIL: 1 columna ── */
-            @media (max-width: 575px) {
-                .gnc-footer-inner {
-                    padding: 32px 16px 28px;
-                }
-
-                .gnc-footer-grid {
-                    grid-template-columns: 1fr;
-                    gap: 28px;
-                }
-
-                .gnc-footer-col-ops {
-                    grid-column: auto;
-                }
-
-                .gnc-footer-brand-name {
-                    font-size: 1.25rem;
-                }
-
-                .gnc-footer-brand img {
-                    height: 46px;
-                }
-
-                /* Botones a ancho completo en móvil */
-                .gnc-btn-group {
-                    flex-direction: column;
-                }
-
-                .gnc-btn-group .gnc-call-contact-link,
-                .gnc-btn-group .gnc-wa-contact-link {
-                    text-align: center;
-                    justify-content: center;
-                    width: 100%;
-                }
-
-                .gnc-email-link {
-                    font-size: 0.82rem;
-                }
+                .gnc-footer-col-ops { grid-column: 1 / -1; }
+                .gnc-footer-col-center { align-items: flex-start; }
+                .gnc-footer-col-center > div { max-width: 100%; }
             }
         </style>
 
         <div id="quienes-somos" class="gnc-footer-wrap seccion-ancla">
-            <div class="gnc-footer-inner">
+
+            <!-- ══ DESKTOP / TABLET (sin cambios) ══ -->
+            <div class="gnc-footer-inner gnc-footer-desktop">
                 <div class="gnc-footer-grid">
 
                     <!-- QUIÉNES SOMOS -->
                     <div>
                         <h6 class="texto-naranja titulo-columna">QUIÉNES SOMOS</h6>
-
                         <div class="gnc-footer-brand">
-                            <img src="${GNC_LOGO}" alt="Logo GNC"
-                                 onerror="this.style.display='none'">
-                            <div class="gnc-footer-brand-name fuente-gnc texto-naranja">
-                                GNC RENTAL<br>SPA
-                            </div>
+                            <img src="${GNC_LOGO}" alt="Logo GNC" onerror="this.style.display='none'">
+                            <div class="gnc-footer-brand-name fuente-gnc texto-naranja">GNC RENTAL<br>SPA</div>
                         </div>
-
                         <p class="texto-oscuro gnc-footer-desc">
                             Empresa familiar con dos décadas de experiencia en Melipilla y la región. Flota integral de arriendo de grúas horquilla, plataformas de izaje y servicio técnico. Responsabilidad, puntualidad y el mejor equipo técnico en cada operación.
                         </p>
-
                         <div class="gnc-footer-social">
                             <a href="https://www.facebook.com/share/1Gb1TsDZSL/" target="_blank" rel="noopener"
                                class="caja-icono text-decoration-none shadow-sm">
@@ -259,21 +343,9 @@ class GncFooter extends HTMLElement {
                         <div>
                             <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
                             <ul class="lista-servicios">
-                                <li>
-                                    <a href="/#flota" class="servicio-link">
-                                        <i class="bi bi-chevron-right"></i>Catálogo de Máquinas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/informacion/cursos" class="servicio-link">
-                                        <i class="bi bi-chevron-right"></i>Cursos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/informacion/clientes" class="servicio-link">
-                                        <i class="bi bi-chevron-right"></i>Portal Clientes
-                                    </a>
-                                </li>
+                                <li><a href="/#flota" class="servicio-link"><i class="bi bi-chevron-right"></i>Catálogo de Máquinas</a></li>
+                                <li><a href="/informacion/cursos" class="servicio-link"><i class="bi bi-chevron-right"></i>Cursos</a></li>
+                                <li><a href="/informacion/clientes" class="servicio-link"><i class="bi bi-chevron-right"></i>Portal Clientes</a></li>
                             </ul>
                         </div>
                     </div>
@@ -281,31 +353,23 @@ class GncFooter extends HTMLElement {
                     <!-- OPERACIONES -->
                     <div class="gnc-footer-col-ops">
                         <h6 class="texto-naranja titulo-columna">CENTRAL DE OPERACIONES</h6>
-
-                        <!-- DIRECCIÓN -->
                         <div class="gnc-contact-row">
-                            <div class="caja-icono shadow-sm">
-                                <i class="bi bi-geo-alt-fill texto-azul fs-5"></i>
-                            </div>
+                            <div class="caja-icono shadow-sm"><i class="bi bi-geo-alt-fill texto-azul fs-5"></i></div>
                             <div>
-                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">CASA MATRIZ</p>
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem;letter-spacing:1px;">CASA MATRIZ</p>
                                 <a href="https://maps.app.goo.gl/KUUf5Spqvk9JyQ196" target="_blank" rel="noopener"
                                    class="texto-oscuro fw-bold text-decoration-none gnc-transition" style="font-size:0.9rem;"
                                    onmouseover="this.classList.replace('texto-oscuro','texto-naranja')"
                                    onmouseout="this.classList.replace('texto-naranja','texto-oscuro')">
                                     Vicuña Mackenna #031, Melipilla, Chile
-                                    <i class="bi bi-box-arrow-up-right ms-1" style="font-size:0.75rem; color:var(--color-azul);"></i>
+                                    <i class="bi bi-box-arrow-up-right ms-1" style="font-size:0.75rem;color:var(--color-azul);"></i>
                                 </a>
                             </div>
                         </div>
-
-                        <!-- TELÉFONO -->
                         <div class="gnc-contact-row">
-                            <div class="caja-icono shadow-sm">
-                                <i class="bi bi-telephone-fill texto-naranja fs-5"></i>
-                            </div>
+                            <div class="caja-icono shadow-sm"><i class="bi bi-telephone-fill texto-naranja fs-5"></i></div>
                             <div>
-                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">LÍNEA DIRECTA</p>
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem;letter-spacing:1px;">LÍNEA DIRECTA</p>
                                 <p class="texto-oscuro fw-bold mb-0" style="font-size:1rem;">+56 9 8555 5741</p>
                                 <div class="gnc-btn-group">
                                     <a href="tel:+${GNC_PHONE}" class="gnc-call-contact-link text-uppercase">
@@ -318,24 +382,78 @@ class GncFooter extends HTMLElement {
                                 </div>
                             </div>
                         </div>
-
-                        <!-- EMAIL -->
                         <div class="gnc-contact-row">
-                            <div class="caja-icono shadow-sm">
-                                <i class="bi bi-envelope-fill texto-manzana fs-5"></i>
-                            </div>
-                            <div style="min-width: 0; overflow: hidden;">
-                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem; letter-spacing:1px;">CONSULTAS TÉCNICAS</p>
-                                <a href="mailto:german_ncabrera@hotmail.es"
-                                   class="texto-oscuro gnc-email-link">
+                            <div class="caja-icono shadow-sm"><i class="bi bi-envelope-fill texto-manzana fs-5"></i></div>
+                            <div style="min-width:0;overflow:hidden;">
+                                <p class="texto-naranja fw-bold mb-1" style="font-size:0.8rem;letter-spacing:1px;">CONSULTAS TÉCNICAS</p>
+                                <a href="mailto:german_ncabrera@hotmail.es" class="texto-oscuro gnc-email-link">
                                     german_ncabrera@hotmail.es
                                 </a>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
+            </div>
+
+            <!-- ══ MÓVIL — DISEÑO COMPACTO ══ -->
+            <div class="gnc-footer-mobile">
+
+                <!-- Logo + nombre -->
+                <div class="gnc-m-brand">
+                    <img src="${GNC_LOGO}" alt="Logo GNC" onerror="this.style.display='none'">
+                    <div class="gnc-m-brand-name fuente-gnc texto-naranja">GNC RENTAL SPA</div>
+                </div>
+
+                <!-- Botones CTA rápidos -->
+                <div class="gnc-m-cta">
+                    <a href="tel:+${GNC_PHONE}" class="gnc-m-cta-call">
+                        <i class="bi bi-telephone-fill"></i> Llamar
+                    </a>
+                    <a href="https://wa.me/${GNC_PHONE}" target="_blank" rel="noopener" class="gnc-m-cta-wa">
+                        <i class="bi bi-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+
+                <!-- Dirección + Email -->
+                <div class="gnc-m-info">
+                    <div class="gnc-m-info-row">
+                        <i class="bi bi-geo-alt-fill texto-azul"></i>
+                        <a href="https://maps.app.goo.gl/KUUf5Spqvk9JyQ196" target="_blank" rel="noopener" class="texto-oscuro">
+                            Vicuña Mackenna #031, Melipilla
+                            <i class="bi bi-box-arrow-up-right ms-1" style="font-size:0.7rem;color:var(--color-azul);"></i>
+                        </a>
+                    </div>
+                    <div class="gnc-m-info-row">
+                        <i class="bi bi-envelope-fill texto-manzana"></i>
+                        <a href="mailto:german_ncabrera@hotmail.es" class="texto-oscuro">
+                            german_ncabrera@hotmail.es
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicios como pills -->
+                <div class="gnc-m-services">
+                    <p class="gnc-m-services-title texto-naranja mb-0">SERVICIOS</p>
+                    <div class="gnc-m-services-links">
+                        <a href="/#flota" class="texto-oscuro">Catálogo</a>
+                        <a href="/informacion/cursos" class="texto-oscuro">Cursos</a>
+                        <a href="/informacion/clientes" class="texto-oscuro">Portal Clientes</a>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="gnc-m-social">
+                    <a href="https://www.facebook.com/share/1Gb1TsDZSL/" target="_blank" rel="noopener"
+                       class="caja-icono text-decoration-none shadow-sm">
+                        <i class="bi bi-facebook texto-azul fs-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gncrental?igsh=dTNjN2lrMm9lajdu" target="_blank" rel="noopener"
+                       class="caja-icono text-decoration-none shadow-sm">
+                        <i class="bi bi-instagram texto-naranja fs-5"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
         `;
