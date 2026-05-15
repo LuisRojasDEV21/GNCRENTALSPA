@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Datos de Clientes — GNC Rental SPA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/estilos.css">
+
+    <style>
+        :root {
+            --naranja: #F37021;
+            --azul: #00AEEF;
+            --manzana: #8DB600;
+            --fondo: #F5F5DC;
+            --fondo-card: #ebebd6;
+            --texto-oscuro: #111111;
+            --texto-suave: #555555;
+            --linea: #dddddd;
+            --blanco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto-oscuro);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        /* ── Hero ── */
+        .hero-datos {
+            background: linear-gradient(135deg, #111111 0%, #2a2a2a 60%, #111111 100%);
+            border-bottom: 4px solid var(--azul);
+            padding: 4rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .hero-datos::before {
+                content: '';
+                position: absolute;
+                top: -60px;
+                right: -60px;
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0,174,239,0.12) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+            .hero-datos h1 {
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                font-size: clamp(1.8rem, 4vw, 2.8rem);
+                color: #F5F5DC;
+                line-height: 1.2;
+                letter-spacing: 0.03em;
+            }
+
+            .hero-datos .badge-aviso {
+                display: inline-block;
+                background: rgba(243,112,33,0.18);
+                border: 1px solid var(--naranja);
+                color: var(--naranja);
+                font-size: 0.72rem;
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                padding: 0.3rem 0.9rem;
+                border-radius: 2px;
+                margin-bottom: 1rem;
+            }
+
+            .hero-datos p.subtitulo {
+                color: #b0aa97;
+                font-size: 0.92rem;
+                max-width: 560px;
+                font-style: italic;
+                margin-top: 0.5rem;
+            }
+
+        /* ── Alerta representativa ── */
+        .alerta-representativa {
+            background: #fffbe6;
+            border-left: 5px solid #f0c040;
+            border-radius: 4px;
+            padding: 1rem 1.4rem;
+            font-size: 0.88rem;
+            color: #7a6a10;
+        }
+
+            .alerta-representativa strong {
+                color: #5a4d08;
+            }
+
+        /* ── Secciones de contenido ── */
+        .seccion-politica {
+            background: var(--blanco);
+            border: 1px solid var(--linea);
+            border-top: 4px solid var(--azul);
+            border-radius: 4px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.6rem;
+            position: relative;
+        }
+
+            .seccion-politica:hover {
+                border-color: var(--manzana);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+                transition: box-shadow 0.3s, border-color 0.3s;
+            }
+
+            .seccion-politica .num {
+                position: absolute;
+                top: -14px;
+                left: 1.8rem;
+                background: var(--azul);
+                color: var(--blanco);
+                font-family: 'Oswald', sans-serif;
+                font-size: 0.78rem;
+                padding: 0.15rem 0.65rem;
+                border-radius: 2px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            .seccion-politica h2 {
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                color: var(--texto-oscuro);
+                margin-bottom: 0.7rem;
+            }
+
+            .seccion-politica p,
+            .seccion-politica li {
+                font-size: 0.92rem;
+                line-height: 1.78;
+                color: var(--texto-suave);
+            }
+
+            .seccion-politica ul {
+                padding-left: 1.2rem;
+            }
+
+            .seccion-politica li {
+                margin-bottom: 0.35rem;
+            }
+
+            .seccion-politica .ley-tag {
+                display: inline-block;
+                font-size: 0.72rem;
+                background: var(--fondo-card);
+                border: 1px solid var(--linea);
+                color: #888;
+                border-radius: 2px;
+                padding: 0.1rem 0.5rem;
+                margin-left: 0.4rem;
+                vertical-align: middle;
+                font-style: normal;
+            }
+
+        /* ── Separador ── */
+        .divider-gnc {
+            border: none;
+            border-top: 1px solid var(--linea);
+            margin: 2.5rem 0;
+        }
+
+        /* ── Fecha actualización ── */
+        .fecha-actualizacion {
+            font-size: 0.78rem;
+            color: #aaa;
+            font-style: italic;
+            text-align: right;
+            margin-top: -0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── Contacto ── */
+        .contacto-box {
+            background: var(--fondo-card);
+            border: 1px solid var(--linea);
+            border-top: 3px solid var(--naranja);
+            border-radius: 4px;
+            padding: 1.5rem 2rem;
+            font-size: 0.9rem;
+        }
+
+            .contacto-box a {
+                color: var(--naranja);
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+                .contacto-box a:hover {
+                    text-decoration: underline;
+                }
+
+        /* ══ FORMULARIO RETIRO DE LOGO ══ */
+        .form-retiro {
+            background: var(--blanco);
+            border: 1px solid var(--linea);
+            border-top: 4px solid var(--naranja);
+            border-radius: 4px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.6rem;
+            position: relative;
+        }
+
+            .form-retiro .form-eyebrow {
+                font-family: 'Oswald', sans-serif;
+                font-size: 0.7rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--naranja);
+                margin-bottom: 0.4rem;
+            }
+
+            .form-retiro h2 {
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                color: var(--texto-oscuro);
+                margin-bottom: 0.5rem;
+            }
+
+            .form-retiro p {
+                font-size: 0.88rem;
+                color: var(--texto-suave);
+                line-height: 1.7;
+                margin-bottom: 1.4rem;
+            }
+
+            .form-retiro label {
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: var(--texto-oscuro);
+                margin-bottom: 0.25rem;
+                display: block;
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .form-retiro input,
+            .form-retiro textarea,
+            .form-retiro select {
+                width: 100%;
+                background: var(--fondo);
+                border: 1px solid var(--linea);
+                border-radius: 2px;
+                padding: 0.55rem 0.85rem;
+                font-size: 0.88rem;
+                color: var(--texto-oscuro);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-bottom: 1rem;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+
+                .form-retiro input:focus,
+                .form-retiro textarea:focus {
+                    border-color: var(--azul);
+                    background: var(--blanco);
+                }
+
+            .form-retiro textarea {
+                resize: vertical;
+                min-height: 90px;
+            }
+
+        .btn-gnc-submit {
+            background: var(--naranja);
+            color: var(--blanco);
+            border: none;
+            border-radius: 2px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.65rem 2rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+            .btn-gnc-submit:hover {
+                background: #d45e10;
+            }
+
+        .form-aviso-legal {
+            font-size: 0.76rem;
+            color: #999;
+            margin-top: 0.8rem;
+            font-style: italic;
+        }
+
+        /* Mensaje éxito */
+        .form-success {
+            display: none;
+            background: #f0f8e8;
+            border: 1px solid #8DB600;
+            border-left: 4px solid #8DB600;
+            border-radius: 2px;
+            padding: 1rem 1.4rem;
+            font-size: 0.88rem;
+            color: #4a6200;
+            margin-top: 1rem;
+        }
+
+            .form-success strong {
+                color: #3a5000;
+            }
+    </style>
+</head>
+<body>
+
+    <gnc-header></gnc-header>
+
+    <section class="hero-datos">
+        <div class="container">
+            <div class="badge-aviso">Documento informativo</div>
+            <h1>Política de Uso de Datos<br>Comerciales de Empresas Clientes</h1>
+            <p class="subtitulo">Este documento regula el uso que GNC Rental SPA realiza del nombre o razón social de las empresas con las que mantiene una relación comercial, conforme a la legislación chilena vigente.</p>
+        </div>
+    </section>
+
+    <main class="container py-5" style="max-width: 820px;">
+
+        <div class="alerta-representativa mb-4">
+            <strong>⚠ Aviso importante:</strong> La presente política es de carácter <strong>meramente representativo e informativo</strong>. No constituye asesoría legal ni reemplaza los términos contractuales pactados entre las partes. Para consultas específicas, le recomendamos contactar a un profesional del área legal.
+        </div>
+
+        <p class="fecha-actualizacion">Última actualización: Mayo 2026</p>
+
+        <div class="seccion-politica">
+            <span class="num">01</span>
+            <h2>Objeto y Alcance de Esta Política</h2>
+            <p>
+                La presente política tiene por objeto regular y transparentar el uso que <strong>GNC Rental SPA</strong> realiza de los datos comerciales identificativos de las personas jurídicas que son o han sido sus clientes, específicamente: el <strong>nombre o razón social</strong> de la empresa.
+            </p>
+            <p>
+                Esta política aplica exclusivamente a empresas clientes de GNC Rental SPA y no comprende datos personales de personas naturales, los cuales se rigen por lo dispuesto en la <strong>Ley N° 19.628 sobre Protección de la Vida Privada</strong> <span class="ley-tag">Ley 19.628</span> y los contratos individuales suscritos.
+            </p>
+        </div>
+
+        <div class="seccion-politica">
+            <span class="num">02</span>
+            <h2>Finalidad del Uso del Nombre de Empresas Clientes</h2>
+            <p>
+                GNC Rental SPA utiliza el nombre o razón social de sus empresas clientes con una finalidad exclusiva y claramente delimitada: <strong>identificar públicamente a dichas organizaciones como clientes activos o históricos de GNC Rental SPA</strong> en el portal de clientes empresa disponible en su sitio web.
+            </p>
+            <p>
+                Esta práctica tiene por propósito:
+            </p>
+            <ul>
+                <li>Acreditar la trayectoria comercial y confiabilidad de GNC Rental SPA ante terceros.</li>
+                <li>Reconocer públicamente a las empresas que han confiado en los servicios de GNC Rental SPA.</li>
+                <li>Establecer una vitrina de referencias comerciales verificables, en beneficio mutuo de ambas partes.</li>
+            </ul>
+            <p>
+                Bajo ninguna circunstancia el nombre de una empresa cliente será utilizado con fines distintos a los anteriormente descritos, ni será cedido, vendido ni comunicado a terceros con propósitos comerciales propios o ajenos.
+            </p>
+        </div>
+
+        <div class="seccion-politica">
+            <span class="num">03</span>
+            <h2>Base Legal que Ampara el Uso de Datos Comerciales de Empresas</h2>
+            <p>
+                El uso del nombre de las empresas clientes por parte de GNC Rental SPA se encuentra respaldado por los siguientes fundamentos legales:
+            </p>
+            <ul>
+                <li>
+                    <strong>Consentimiento contractual expreso:</strong> al suscribir el contrato de arriendo de vehículos con GNC Rental SPA, el representante legal de la empresa otorga autorización para la publicación de su nombre o razón social en el portal de clientes. Esta cláusula se encuentra incorporada en el cuerpo del contrato y se entiende aceptada al momento de la firma.
+                    <span class="ley-tag">Código Civil, Art. 1545</span>
+                </li>
+                <li>
+                    <strong>Consentimiento posterior escrito:</strong> alternativamente, la empresa cliente puede otorgar autorización mediante comunicación escrita dirigida a GNC Rental SPA, con independencia de la fecha de celebración del contrato.
+                    <span class="ley-tag">Ley 19.628, Art. 4°</span>
+                </li>
+                <li>
+                    <strong>Datos de carácter comercial y público:</strong> la razón social de una persona jurídica es un dato de naturaleza esencialmente pública, registrado en el <strong>Registro de Comercio</strong>, lo que reduce su carácter de dato sensible y permite su uso en contextos comerciales legítimos.
+                    <span class="ley-tag">Código de Comercio</span>
+                </li>
+            </ul>
+            <p>
+                En todos los casos, el uso realizado por GNC Rental SPA se limita estrictamente al fin autorizado y cumple con el principio de <strong>finalidad específica</strong> exigido por la legislación chilena vigente.
+            </p>
+        </div>
+
+        <div class="seccion-politica">
+            <span class="num">04</span>
+            <h2>Derecho a Revocar la Autorización: Retiro del Nombre</h2>
+            <p>
+                La empresa cliente tiene el <strong>derecho irrenunciable</strong> de revocar en cualquier momento la autorización para la publicación de su nombre o razón social en el portal de clientes de GNC Rental SPA, conforme a lo establecido en el <strong>artículo 12° de la Ley N° 19.628</strong> <span class="ley-tag">Ley 19.628, Art. 12°</span>.
+            </p>
+            <p>
+                Este derecho podrá ejercerse mediante:
+            </p>
+            <ul>
+                <li>Solicitud formal a través del formulario habilitado en esta misma página.</li>
+                <li>Comunicación escrita dirigida al correo electrónico <strong>lu.rojaespi@gmail.com</strong>, indicando la razón social de la empresa cuya publicación se solicita retirar.</li>
+            </ul>
+            <p>
+                Una vez recibida la solicitud, GNC Rental SPA procederá al retiro del contenido dentro de un plazo máximo de <strong>10 días hábiles</strong>. La revocación de esta autorización no afectará en modo alguno la relación comercial vigente ni los derechos y obligaciones derivados del contrato de arriendo suscrito.
+            </p>
+        </div>
+
+        <div class="seccion-politica">
+            <span class="num">05</span>
+            <h2>Conservación de Datos y Período de Publicación</h2>
+            <p>
+                La publicación del nombre de una empresa cliente en el portal de GNC Rental SPA se mantendrá vigente mientras subsista la relación comercial activa o hasta que la empresa ejerza su derecho de revocación conforme a lo indicado en la sección anterior.
+            </p>
+            <p>
+                Con posterioridad a la revocación o al término de la relación comercial, el dato identificativo de la empresa (razón social) podrá ser conservado en los registros internos de GNC Rental SPA exclusivamente para efectos de:
+            </p>
+            <ul>
+                <li>Cumplimiento de obligaciones tributarias y contables, por el plazo de <strong>6 años</strong> exigido por el <strong>Código Tributario</strong> <span class="ley-tag">Código Tributario</span>.</li>
+                <li>Respaldo de acciones legales o cobros pendientes vinculados a la relación comercial.</li>
+            </ul>
+            <p>
+                En ningún caso dichos datos serán publicados nuevamente sin una nueva autorización expresa.
+            </p>
+        </div>
+
+        <div class="seccion-politica">
+            <span class="num">06</span>
+            <h2>Responsable del Tratamiento y Contacto</h2>
+            <p>
+                <strong>GNC Rental SPA</strong>, con domicilio en la Región Metropolitana, Chile, es el único responsable del tratamiento de los datos comerciales identificativos de sus empresas clientes en los términos descritos en esta política.
+            </p>
+            <p>
+                Para cualquier consulta, solicitud de información, rectificación o revocación de autorización, el representante legal de la empresa cliente puede dirigirse a:
+            </p>
+            <ul>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:lu.rojaespi@gmail.com" style="color: var(--naranja); font-weight: 600;">lu.rojaespi@gmail.com</a></li>
+                <li><strong>Formulario de solicitud:</strong> disponible en la sección siguiente de esta misma página.</li>
+            </ul>
+            <p>
+                GNC Rental SPA se compromete a dar respuesta a toda solicitud en los plazos establecidos por la legislación chilena vigente.
+            </p>
+        </div>
+
+        <hr class="divider-gnc">
+
+        <div class="form-retiro" id="formulario-retiro">
+            <p class="form-eyebrow">✦ Ejercicio de derechos</p>
+            <h2>Solicitud de Retiro de Nombre Empresarial</h2>
+            <p>
+                Si representa a una empresa cliente de GNC Rental SPA y desea revocar la autorización de publicación de su nombre o razón social en el portal de clientes, complete el siguiente formulario. Su solicitud será procesada dentro de los <strong>10 días hábiles</strong> siguientes a su recepción.
+            </p>
+
+            <form action="https://formspree.io/f/xbdwvnza" method="POST" id="form-retiro-logo">
+
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="hidden" name="_subject" value="Solicitud de retiro de nombre — GNC Rental SPA">
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="razon_social">Razón Social de la Empresa *</label>
+                        <input type="text" id="razon_social" name="razon_social" placeholder="Ej: GNC RENTAL SPA" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="rut_empresa">RUT de la Empresa (Para verificación) *</label>
+                        <input type="text" id="rut_empresa" name="rut_empresa" placeholder="Ej: 11.111.111-1" required>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nombre_representante">Nombre del Representante Legal *</label>
+                        <input type="text" id="nombre_representante" name="nombre_representante" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email">Correo Electrónico de Contacto *</label>
+                        <input type="email" id="email" name="email" placeholder="correo@empresa.cl" required>
+                    </div>
+                </div>
+
+                <label for="solicitud">Tipo de Solicitud *</label>
+                <select id="solicitud" name="solicitud" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="Retiro del nombre o razón social">Retiro del nombre o razón social</option>
+                    <option value="Consulta sobre publicación">Consulta sobre publicación de mis datos</option>
+                </select>
+
+                <label for="observaciones">Observaciones (opcional)</label>
+                <textarea id="observaciones" name="observaciones" placeholder="Indique cualquier información adicional relevante para su solicitud..."></textarea>
+
+                <div style="background: var(--fondo-card); border: 1px solid var(--linea); border-left: 3px solid var(--azul); border-radius: 2px; padding: 0.75rem 1rem; margin-bottom: 1.2rem; font-size: 0.82rem; color: var(--texto-suave);">
+                    <strong style="color: var(--texto-oscuro);">Declaración del solicitante:</strong> Al enviar este formulario, el firmante declara ser representante legal o apoderado con facultades suficientes para actuar en nombre de la empresa indicada, y solicita formalmente a GNC Rental SPA el retiro de los datos señalados conforme al artículo 12° de la Ley N° 19.628.
+                </div>
+
+                <button type="submit" class="btn-gnc-submit">Enviar Solicitud</button>
+
+                <p class="form-aviso-legal">
+                    * Campos obligatorios. Los datos ingresados en este formulario serán utilizados exclusivamente para verificar y gestionar su solicitud de retiro, y no serán comunicados a terceros.
+                </p>
+            </form>
+
+            <div class="form-success" id="form-success-msg">
+                <strong>✔ Solicitud recibida correctamente.</strong><br>
+                Hemos recibido su solicitud de retiro. GNC Rental SPA la procesará dentro de los próximos <strong>10 días hábiles</strong> y se comunicará con usted al correo indicado para confirmar la gestión.
+            </div>
+        </div>
+
+        <hr class="divider-gnc">
+
+        <div class="contacto-box">
+            <p class="mb-1" style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">¿Otras consultas sobre tus datos?</p>
+            <p class="mb-0" style="font-size:0.88rem; color: var(--texto-suave);">
+                Para consultas distintas al retiro de nombre, escríbenos directamente a:
+                <a href="mailto:lu.rojaespi@gmail.com">lu.rojaespi@gmail.com</a>
+            </p>
+        </div>
+
+    </main>
+
+    <gnc-footer-simple></gnc-footer-simple>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/main.js"></script>
+
+    <script>
+        // Mostrar mensaje de éxito si Formspree redirige con ?success=true
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('success') === 'true') {
+                const form = document.getElementById('form-retiro-logo');
+                const msg = document.getElementById('form-success-msg');
+                if (form) form.style.display = 'none';
+                if (msg) msg.style.display = 'block';
+                document.getElementById('formulario-retiro').scrollIntoView({ behavior: 'smooth' });
+            }
+        })();
+    </script>
+</body>
+</html>

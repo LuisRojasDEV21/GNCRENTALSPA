@@ -204,7 +204,7 @@ class GncFooterSimple extends HTMLElement {
                     &copy; 2026. GNC RENTAL SPA — Todos los derechos reservados.
                 </p>
                 <p class="mb-0 texto-oscuro" style="font-size: 0.82rem; opacity: 0.6;">
-                    <a href="#" class="texto-azul fw-bold text-decoration-none">Política de datos de clientes</a>
+                    <a href="/clientesdatos" class="texto-azul fw-bold text-decoration-none">Política de datos de clientes</a>
                     <span class="mx-2 d-none d-sm-inline">|</span>
                     <br class="d-sm-none">
                     Desarrollado por:
