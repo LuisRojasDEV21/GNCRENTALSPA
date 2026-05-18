@@ -3,42 +3,287 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GNC Rental Spa - Cursos</title>
+    <title>GNC Rental Spa - Clientes</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../estilos.css">
+
+    <style>
+        .clientes-hero {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+            .clientes-hero .subtitulo {
+                font-size: 0.75rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: #00AEEF;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .clientes-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .clientes-hero p {
+                font-size: 0.95rem;
+                opacity: 0.75;
+                max-width: 420px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+
+        /* ── Divider decorativo ── */
+        .gnc-divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 200px;
+            margin: 14px auto 18px;
+        }
+
+            .gnc-divider::before,
+            .gnc-divider::after {
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: #c8c4b0;
+            }
+
+        .gnc-divider-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #00AEEF;
+            flex-shrink: 0;
+        }
+
+        /* ── Contador ── */
+        .clientes-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: rgba(255,255,255,0.55);
+            border: 1px solid #e0dcc8;
+            border-radius: 10px;
+            padding: 14px 28px;
+            margin-bottom: 40px;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .clientes-counter .num {
+                font-family: 'Oswald', sans-serif;
+                font-size: 2.6rem;
+                font-weight: 700;
+                color: #F37021;
+                line-height: 1;
+            }
+
+            .clientes-counter .sep {
+                width: 1px;
+                height: 38px;
+                background: #d0cdb8;
+            }
+
+            .clientes-counter .label {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                opacity: 0.6;
+                line-height: 1.4;
+                text-align: left;
+            }
+
+        /* ── Grid de clientes ── */
+        .clientes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 64px;
+        }
+
+        .cliente-card {
+            background: #fff;
+            border: 1.5px solid #e8e4d5;
+            border-radius: 10px;
+            padding: 26px 16px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #2b2b2b;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(14px);
+            animation: fadeUp 0.4s ease forwards;
+        }
+
+            .cliente-card::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: #00AEEF;
+                transform: scaleX(0);
+                transition: transform 0.25s ease;
+                transform-origin: left;
+            }
+
+            .cliente-card:hover {
+                border-color: #00AEEF;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 174, 239, 0.10);
+            }
+
+                .cliente-card:hover::after {
+                    transform: scaleX(1);
+                }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cliente-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .cliente-card:nth-child(2) {
+            animation-delay: 0.10s;
+        }
+
+        .cliente-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .cliente-card:nth-child(4) {
+            animation-delay: 0.20s;
+        }
+
+        .cliente-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+
+        .cliente-card:nth-child(6) {
+            animation-delay: 0.30s;
+        }
+
+        .cliente-card:nth-child(7) {
+            animation-delay: 0.35s;
+        }
+
+        .cliente-card:nth-child(8) {
+            animation-delay: 0.40s;
+        }
+
+        .cliente-card:nth-child(9) {
+            animation-delay: 0.45s;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 767px) {
+            .clientes-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .cliente-card {
+                padding: 20px 12px;
+                font-size: 0.9rem;
+            }
+
+            .clientes-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .clientes-hero {
+                padding: 32px 0 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .clientes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <gnc-header></gnc-header>
 
-    <div class="container py-5 mt-5 mb-5 d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 50vh;">
+    <div class="container pb-5">
 
-        <!-- Botón de volver a la izquierda -->
-        <div class="w-100 text-start mb-5">
-            <a href="../index.html" class="text-decoration-none texto-oscuro fw-bold">
+        <!-- Volver -->
+        <div class="pt-4">
+            <a href="../index.html" class="text-decoration-none texto-oscuro fw-bold gnc-transition"
+               onmouseover="this.classList.replace('texto-oscuro','texto-naranja')"
+               onmouseout="this.classList.replace('texto-naranja','texto-oscuro')">
                 <i class="bi bi-arrow-left"></i> Volver al inicio
             </a>
         </div>
 
-        <!-- Mensaje de Construcción -->
-        <i class="bi bi-cone-striped texto-naranja mb-3" style="font-size: 4rem;"></i>
-        <h1 class="display-4 fw-bold texto-azul mb-3">En construcción 🚧</h1>
-        <p class="fs-4 texto-oscuro fw-medium">Pronto información de los clientes asociados a la empresa.</p>
+        <!-- Hero -->
+        <div class="clientes-hero">
+            <p class="subtitulo">Confían en nosotros</p>
+            <h1 class="fuente-gnc texto-oscuro">NUESTROS <span class="texto-naranja">CLIENTES</span></h1>
+
+            <div class="gnc-divider">
+                <div class="gnc-divider-dot"></div>
+            </div>
+
+            <p class="texto-oscuro">
+                Empresas y organizaciones que han confiado en GNC Rental para sus operaciones de izaje y carga.
+            </p>
+        </div>
+
+        <!-- Contador -->
+        <div class="clientes-counter">
+            <span class="num" id="contador-clientes"></span>
+            <div class="sep"></div>
+            <span class="label">Empresas<br>asociadas</span>
+        </div>
+
+        <!-- Grid de clientes -->
+        <div class="clientes-grid">
+            <div class="cliente-card">AGRICOLA HUILLINCO SPA</div>
+            <div class="cliente-card" style="display:none">La viña</div>
+            <div class="cliente-card" style="display:none">aristia</div>
+            <div class="cliente-card" style="display:none">Agrosuper</div>
+            <div class="cliente-card">MELIFEED SPA</div>
+            <div class="cliente-card">SOCIEDAD TRES MARIAS SPA</div>
+            <div class="cliente-card">SOCIEDAD AGRÍCOLA E INVERSIONES LA LOICA SPA</div>
+            <div class="cliente-card">MINDU SPA</div>
+            <div class="cliente-card" style="display:none">Foodtruck</div>
+        </div>
 
     </div>
 
-    <!-- FOOTER AUTOMÁTICO -->
-    <gnc-footer></gnc-footer>
+    <gnc-footer-simple></gnc-footer-simple>
 
-    <!-- Bootstrap JS y TU SCRIPT AUTOMÁTICO -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../main.js"></script>
-
-    <!-- Vercel Insights -->
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        const total = document.querySelectorAll('.cliente-card:not([style*="display:none"])').length;
+        document.getElementById('contador-clientes').textContent = total;
+    </script>
 </body>
 </html>
