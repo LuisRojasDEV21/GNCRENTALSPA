@@ -271,3 +271,11 @@ gnc-header {
     .lista-caracteristicas li strong {
         color: #00AEEF;
     }
+
+/* =========================================
+   UTILIDADES GNC
+   ========================================= */
+/* Interruptor personalizado para ocultar secciones rápido desde el HTML */
+[data-visibilidad="ocultar"] {
+    display: none !important;
+}
