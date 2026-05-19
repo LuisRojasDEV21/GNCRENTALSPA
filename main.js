@@ -176,6 +176,27 @@ class GncFooter extends HTMLElement {
             }
             .gnc-footer-mobile { display: none; }
 
+            /* ✅ FIX: Servicios link */
+            .servicio-link {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                text-decoration: none;
+                color: inherit;
+                font-size: 0.9rem;
+                transition: color 0.4s ease;
+            }
+            .servicio-link i {
+                font-size: 0.75rem;
+                transition: transform 0.4s ease;
+            }
+            .servicio-link:hover {
+                color: #F37021;
+            }
+            .servicio-link:hover i {
+                transform: translateX(4px);
+            }
+
             @media (max-width: 575px) {
                 .gnc-footer-desktop { display: none !important; }
                 .gnc-footer-mobile {
