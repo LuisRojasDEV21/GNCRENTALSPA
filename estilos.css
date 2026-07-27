@@ -73,12 +73,105 @@ gnc-header {
         color: #8DB600 !important;
     }
 
+/* Botón de cotización en la barra de navegación */
+.gnc-nav-cta {
+    display: inline-block;
+    background-color: #8DB600;
+    color: #ffffff !important;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 18px;
+    transition: background-color 0.3s ease;
+}
+
+    .gnc-nav-cta:hover {
+        background-color: #111111;
+    }
+
 /* =========================================
-   AJUSTES DE ESPACIOS (ELIMINAR HUECOS)
+   HERO / PORTADA
    ========================================= */
 #inicio {
     margin-top: 0 !important;
 }
+
+.gnc-hero {
+    background: linear-gradient(rgba(12, 12, 12, 0.62), rgba(12, 12, 12, 0.46)), url('/wwwroot/images/banner.png') center center / cover no-repeat;
+    border-bottom: 5px solid #8DB600;
+    padding: 96px 20px;
+}
+
+.gnc-hero-kicker {
+    color: #00AEEF;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.gnc-hero-titulo {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 4.3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.05;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.55);
+    margin-bottom: 18px;
+}
+
+.gnc-hero-sub {
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1.06rem;
+    line-height: 1.7;
+}
+
+.gnc-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn-borde-blanco {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: #ffffff !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+    .btn-borde-blanco:hover {
+        background-color: #ffffff;
+        color: #111111 !important;
+    }
+
+.gnc-hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 32px;
+    margin: 36px auto 0;
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+    .gnc-hero-facts i {
+        color: #8DB600;
+        margin-right: 7px;
+    }
 
 #flota .text-center {
     padding-top: 10px !important;
@@ -132,18 +225,97 @@ gnc-header {
     border: 1px solid #dddddd;
     border-top: 4px solid #00AEEF;
     background-color: #ffffff;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
     .card-gnc:hover {
-        transform: translateY(-10px);
+        transform: translateY(-6px);
         border-color: #8DB600;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     }
 
+.card-img-wrap {
+    position: relative;
+}
+
+/* Etiqueta de tipo de motor sobre la foto de cada máquina */
+.gnc-chip {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background-color: rgba(17, 17, 17, 0.82);
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 11px;
+}
+
+/* Línea de especificaciones rápidas en las tarjetas */
+.gnc-specs-mini {
+    color: #00AEEF;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.65rem;
+}
+
+/* Bajada de texto bajo los títulos de sección */
+.gnc-seccion-sub {
+    color: #555555;
+    max-width: 640px;
+    margin: 14px auto 0;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
 .seccion-ancla {
     scroll-margin-top: 100px;
 }
+
+/* =========================================
+   SECCIÓN QUIÉNES SOMOS
+   ========================================= */
+.gnc-nosotros {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e1d2;
+    border-bottom: 1px solid #e5e1d2;
+}
+
+    .gnc-nosotros .gnc-parrafo {
+        color: #444444;
+        font-size: 1.02rem;
+        line-height: 1.75;
+    }
+
+.gnc-valor-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+    .gnc-valor-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .gnc-valor-row h3 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #111111;
+        margin-bottom: 4px;
+    }
+
+    .gnc-valor-row p {
+        color: #555555;
+        font-size: 0.93rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
 
 /* =========================================
    PIE DE PÁGINA (QUIÉNES SOMOS)
@@ -270,6 +442,34 @@ gnc-header {
 
     .lista-caracteristicas li strong {
         color: #00AEEF;
+    }
+
+/* =========================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================= */
+.gnc-wa-flotante {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 1080;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .gnc-wa-flotante:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
     }
 
 /* =========================================

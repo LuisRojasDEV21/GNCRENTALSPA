@@ -56,10 +56,17 @@ class GncHeader extends HTMLElement {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav gap-3">
+                    <ul class="navbar-nav gap-3 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link gnc-link" href="/#inicio">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link gnc-link" href="/#flota">Flota</a></li>
                         <li class="nav-item"><a class="nav-link gnc-link" href="/#quienes-somos">Quiénes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link gnc-link" href="/#faq">Preguntas</a></li>
+                        <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
+                            <a href="https://wa.me/${GNC_PHONE}?text=${encodeURIComponent('Hola, vengo de su página web. Quiero cotizar el arriendo de maquinaria.')}"
+                               target="_blank" rel="noopener" class="gnc-nav-cta">
+                                <i class="bi bi-whatsapp"></i> Cotizar
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -319,19 +326,19 @@ class GncFooter extends HTMLElement {
             }
         </style>
 
-        <div id="quienes-somos" class="gnc-footer-wrap seccion-ancla">
+        <div class="gnc-footer-wrap">
 
             <div class="gnc-footer-inner gnc-footer-desktop">
                 <div class="gnc-footer-grid">
 
                     <div>
-                        <h6 class="texto-naranja titulo-columna">QUIÉNES SOMOS</h6>
+                        <h6 class="texto-naranja titulo-columna">LA EMPRESA</h6>
                         <div class="gnc-footer-brand">
                             <img src="${GNC_LOGO}" alt="Logo GNC" onerror="this.style.display='none'">
                             <div class="gnc-footer-brand-name fuente-gnc texto-naranja">GNC RENTAL<br>SPA</div>
                         </div>
                         <p class="texto-oscuro gnc-footer-desc">
-                            Empresa familiar con dos décadas de experiencia en Melipilla y la región. Flota integral de arriendo de grúas horquilla, plataformas de izaje y servicio técnico. Responsabilidad, puntualidad y el mejor equipo técnico en cada operación.
+                            Arriendo de grúas horquilla, plataformas de izaje y manipuladores telescópicos en Melipilla y la región. Empresa familiar, dos décadas en el rubro.
                         </p>
                         ${htmlRedesDesktop}
                     </div>
@@ -341,6 +348,7 @@ class GncFooter extends HTMLElement {
                             <h6 class="texto-naranja titulo-columna">SERVICIOS</h6>
                             <ul class="lista-servicios">
                                 <li><a href="/#flota" class="servicio-link"><i class="bi bi-chevron-right"></i>Catálogo de Máquinas</a></li>
+                                <li><a href="/#faq" class="servicio-link"><i class="bi bi-chevron-right"></i>Preguntas Frecuentes</a></li>
                                 ${htmlCursosDesktop}
                                 ${htmlPortalDesktop}
                             </ul>
@@ -456,9 +464,25 @@ class GncFooterSimple extends HTMLElement {
     }
 }
 
+/* =========================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   Uso: <gnc-whatsapp></gnc-whatsapp> en cualquier página
+   ========================================= */
+class GncWhatsapp extends HTMLElement {
+    connectedCallback() {
+        const mensaje = encodeURIComponent('Hola, vengo de su página web. Quiero cotizar el arriendo de maquinaria.');
+        this.innerHTML = `
+        <a href="https://wa.me/${GNC_PHONE}?text=${mensaje}" target="_blank" rel="noopener"
+           class="gnc-wa-flotante" aria-label="Cotizar por WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>`;
+    }
+}
+
 customElements.define('gnc-header', GncHeader);
 customElements.define('gnc-footer', GncFooter);
 customElements.define('gnc-footer-simple', GncFooterSimple);
+customElements.define('gnc-whatsapp', GncWhatsapp);
 
 /* =========================================
    3. LÓGICA DEL CARRUSEL DE FLOTA
