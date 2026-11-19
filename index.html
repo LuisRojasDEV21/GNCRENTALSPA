@@ -3,25 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página bloqueada</title>
-    <meta name="description" content="Página bloqueada hasta regularización de pago y cumplimiento de carta de recomendación.">
+    <title>Sitio temporalmente bloqueado</title>
+    <meta name="description" content="Sitio desarrollado y entregado. Como pago se acordó una carta de recomendación, no cumplida. Se regulariza con la carta o con un pago de $119.000 IVA incluido, y el sitio será cedido en su totalidad.">
     <link rel="canonical" href="https://gncrentalspa.com/">
 
-    <meta property="og:title" content="Página bloqueada">
-    <meta property="og:description" content="Página bloqueada hasta regularización de pago y cumplimiento de carta de recomendación.">
+    <meta property="og:title" content="Sitio temporalmente bloqueado">
+    <meta property="og:description" content="Sitio desarrollado y entregado. Como pago se acordó una carta de recomendación, no cumplida. Se regulariza con la carta o con un pago de $119.000 IVA incluido, y el sitio será cedido en su totalidad.">
     <meta property="og:url" content="https://gncrentalspa.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CL">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Página bloqueada">
-    <meta name="twitter:description" content="Página bloqueada hasta regularización de pago y cumplimiento de carta de recomendación.">
+    <meta name="twitter:title" content="Sitio temporalmente bloqueado">
+    <meta name="twitter:description" content="Sitio desarrollado y entregado. Como pago se acordó una carta de recomendación, no cumplida. Se regulariza con la carta o con un pago de $119.000 IVA incluido, y el sitio será cedido en su totalidad.">
 
     <link rel="icon" href="data:,">
     <style>
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100%;
         }
         body {
             background-color: #ffffff;
@@ -30,22 +30,74 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 24px;
+            min-height: 100vh;
+            padding: 32px 24px;
             box-sizing: border-box;
         }
-        .mensaje {
-            max-width: 1000px;
+        .wrap {
+            max-width: 760px;
+            text-align: center;
+        }
+        .wrap h1 {
+            font-weight: 800;
+            font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+            line-height: 1.2;
+            margin: 0 0 28px;
+        }
+        .wrap p {
+            font-size: clamp(1rem, 2.6vw, 1.22rem);
+            line-height: 1.6;
+            margin: 0 0 18px;
+        }
+        .opciones {
+            text-align: left;
+            display: inline-block;
+            margin: 10px auto 24px;
+            padding: 20px 26px;
+            border: 2px solid #000000;
+            border-radius: 10px;
+        }
+        .opciones p {
+            margin: 0 0 12px;
             font-weight: 700;
-            font-size: clamp(1.8rem, 5vw, 4rem);
-            line-height: 1.25;
-            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .opciones ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+        .opciones li {
+            font-size: clamp(1rem, 2.6vw, 1.22rem);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .opciones li:last-child {
+            margin-bottom: 0;
+        }
+        .cierre {
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <main class="mensaje">
-        Página bloqueada hasta regularización de pago y cumplimiento de carta de recomendación
+    <main class="wrap">
+        <h1>Sitio temporalmente bloqueado</h1>
+
+        <p>Este sitio web fue desarrollado y entregado en su totalidad.</p>
+
+        <p>Como contraprestación por el trabajo realizado no se acordó un pago en dinero, sino la entrega de una <strong>carta de recomendación</strong>.</p>
+
+        <p>A la fecha, ese acuerdo no ha sido cumplido, por motivos ajenos tanto al trabajo entregado como a la empresa.</p>
+
+        <div class="opciones">
+            <p>El tema puede regularizarse de cualquiera de estas dos formas:</p>
+            <ul>
+                <li>La entrega de la carta de recomendación acordada, o</li>
+                <li>Un pago de <strong>$119.000 IVA incluido</strong>.</li>
+            </ul>
+        </div>
+
+        <p class="cierre">Cumplida cualquiera de las dos opciones, el sitio será cedido en su totalidad.</p>
     </main>
 </body>
 </html>
